@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIGI Buys Homes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!--OUTFIT FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--INTER FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="GIGI Logo.svg" alt="GIGI Buys Homes" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeWeBuyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Home We Buy
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="homeWeBuyDropdown">
+                            <li><a class="dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whySellDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Why Sell?
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whySellDropdown">
+                            <li><a class="dropdown-item" href="#">Reason 1</a></li>
+                            <li><a class="dropdown-item" href="#">Reason 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+                <a href="#" class="btn btn-warning ms-3">Sell Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">YouTube</a>
+            <a href="#" class="social-link">Facebook</a>
+        </div>
+<!-- Centered Overlay Hero Image -->
+<div class="hero-overlay">
+    <img src="Hero Image.png" alt="Hero Image" class="center-hero-image">
+</div>
+        <!-- Hero Content -->
+        <div class="container hero-content">
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <h1>Sell Your Home <br>
+                        <span class="highlight">Fast & Stress-Free</span>
+                    </h1>
+                
+                    <!-- Arrow Image -->
+                    <div class="arrow-container">
+                        <img src="Curved Arrow.svg" alt="Curved Arrow" class="arrow-svg">
+                    </div>
+                
+                    <p style="font-family: inter;">
+                        Bringing together a team with passion, dedication, and resources to help our clients reach their buying and selling goals.
+                    </p>
+                
+                    <div class="gigi-bg">
+                        <a href="#" class="btn btn-warning">Explore Properties →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-container">
+                        <h2>Get Your Free Cash Offer</h2>
+                        <p>No commitments, just a free estimate</p>
+                        <form id="cashOfferForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Address" id="address" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Name" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Phone" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" id="email" required>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="terms">
+                                <label class="form-check-label" for="terms">I certify that I have read and accepted the Terms & Conditions and Privacy Statement.</label>
+                            </div>
+                            <button type="submit" class="btn btn-warning w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Scroll to Bottom Button -->
+        <div class="scroll-to-bottom">
+            <a href="#bottom">↓</a>
+        </div>
+    </header>
+
+    <section class="stats-section" id="bottom">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <h2 class="counter">850+</h2>
+                    <p>Homes Purchased and Closed Fast</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="counter">950+</h2>
+                    <p>Happy Sellers Who Sold As-Is</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="counter">1800+</h2>
+                    <p>Satisfied Homeowners Trust Our Process</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="counter">2000++</h2>
+                    <p>Families Relocated Quickly and Easily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Explore Properties -->
+<section class="properties-section">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left 50% -->
+            <div class="col-lg-6 col-md-12 left-section">
+                <h1 class="featured-title">Featured</h1>
+                <h2>Explore Our Premier Properties</h2>
+                <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
+                <a href="#" class="btn btn-warning learn-more-btn">Learn More →</a>
+            </div>
+            
+            <!-- Right 50% - Custom Carousel -->
+            <div class="col-lg-6 col-md-12">
+                <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- First Image -->
+                        <div class="carousel-item active">
+                            <div class="carousel-image-wrapper">
+                                <img src="image1.jpg" class="d-block w-100" alt="Townhouses">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Townhouses</p>
+                                <a href="townhouses.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                            </div>
+                        </div>
+                        <!-- Second Image -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="image2.jpg" class="d-block w-100" alt="Luxury Villa">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Luxury Villa</p>
+                                <a href="luxury-villa.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                            </div>
+                        </div>
+                        <!-- Third Image -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="image3.jpg" class="d-block w-100" alt="Modern Homes">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Modern Homes</p>
+                                <a href="modern-homes.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                            </div>
+                        </div>
+                        <!-- Fourth Image -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="image4.jpg" class="d-block w-100" alt="Beachfront Villas">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Beachfront Villas</p>
+                                <a href="beachfront-villas.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Custom Line Indicators -->
+                    <div class="carousel-line-indicators">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
