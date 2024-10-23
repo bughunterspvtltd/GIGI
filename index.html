@@ -155,70 +155,52 @@
 
 
 <!-- Explore Properties -->
-<section class="properties-section">
+ <!-- Properties Section -->
+ <section class="properties-section">
     <div class="container-fluid">
         <div class="row">
-            <!-- Left 50% -->
+            <!-- Left Static Content (50%) -->
             <div class="col-lg-6 col-md-12 left-section">
                 <h1 class="featured-title">Featured</h1>
                 <h2>Explore Our Premier Properties</h2>
                 <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
                 <a href="#" class="btn btn-warning learn-more-btn">Learn More →</a>
             </div>
-            
-            <!-- Right 50% - Custom Carousel -->
+
+            <!-- Right Carousel (50%) -->
             <div class="col-lg-6 col-md-12">
-                <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                     <div class="carousel-inner">
-                        <!-- First Image -->
+                        <!-- First Slide -->
                         <div class="carousel-item active">
                             <div class="carousel-image-wrapper">
-                                <img src="image1.jpg" class="d-block w-100" alt="Townhouses">
+                                <img src="Hero Image.png" class="d-block w-100" alt="Townhouses">
                                 <div class="overlay"></div>
                                 <p class="carousel-text">Townhouses</p>
                                 <a href="townhouses.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
                             </div>
                         </div>
-                        <!-- Second Image -->
+                        <!-- Second Slide -->
                         <div class="carousel-item">
                             <div class="carousel-image-wrapper">
-                                <img src="image2.jpg" class="d-block w-100" alt="Luxury Villa">
+                                <img src="Hero Image.png" class="d-block w-100" alt="Luxury Villa">
                                 <div class="overlay"></div>
                                 <p class="carousel-text">Luxury Villa</p>
                                 <a href="luxury-villa.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
                             </div>
                         </div>
-                        <!-- Third Image -->
-                        <div class="carousel-item">
-                            <div class="carousel-image-wrapper">
-                                <img src="image3.jpg" class="d-block w-100" alt="Modern Homes">
-                                <div class="overlay"></div>
-                                <p class="carousel-text">Modern Homes</p>
-                                <a href="modern-homes.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                            </div>
-                        </div>
-                        <!-- Fourth Image -->
-                        <div class="carousel-item">
-                            <div class="carousel-image-wrapper">
-                                <img src="image4.jpg" class="d-block w-100" alt="Beachfront Villas">
-                                <div class="overlay"></div>
-                                <p class="carousel-text">Beachfront Villas</p>
-                                <a href="beachfront-villas.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                            </div>
-                        </div>
                     </div>
-                    <!-- Custom Line Indicators -->
+                    <!-- Carousel Indicators (Line) -->
                     <div class="carousel-line-indicators">
-                        <span class="active"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="0" class="active"></span>
+                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="1"></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 

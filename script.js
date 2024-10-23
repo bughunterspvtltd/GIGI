@@ -31,3 +31,23 @@ $('#cashOfferForm').on('submit', function (event) {
         alert('Please fill in all fields and accept the terms.');
     }
 });
+
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+document.querySelector('.next').addEventListener('click', function() {
+    goToSlide(currentSlide + 1);
+});
+
+document.querySelector('.prev').addEventListener('click', function() {
+    goToSlide(currentSlide - 1);
+});
+
+function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+}

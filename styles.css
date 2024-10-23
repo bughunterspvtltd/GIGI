@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'outfit',Inter, sans-serif;
+    font-family: 'outfit','Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,10 +29,16 @@ body {
     background-color: #ffcc00;
     border: none;
     color: #000;
+    /* width: 125px; */
+    font-weight: bold;
 }
 .logo{
     height: 50px;
     width: auto;
+}
+.row{
+    margin-left: 10%;
+    align-items: center;
 }
 
 /* Hero Section */
@@ -43,10 +49,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 .center-hero-image {
-    width: 1250px;
+    width: 1350px;
     height: 500px;
     /* border-radius: 50px; */
     /* object-fit: cover; */
@@ -93,6 +100,7 @@ h1 {
     position: relative;
     font-size: 3rem;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .highlight {
@@ -160,7 +168,7 @@ h1 {
     position: absolute;
     font-size: 10rem;
     color: rgba(255, 255, 255, 0.097);
-    top: -5px;
+    top: -40px;
     left: 0;
     z-index: -1;
 }
@@ -212,19 +220,30 @@ h1 {
 }
 
 
-/* <!-- Explore Properties --> */
+
+
+
+
+
+
+
 .properties-section {
     background-color: #000; /* Dark background */
     color: white;
     padding: 50px 0;
 }
 
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
 .left-section h1.featured-title {
     font-size: 2rem;
     font-weight: bold;
     color: #ffcc00; /* Yellow color for 'Featured' */
-    position: relative;
-    z-index: 1;
 }
 
 .left-section h2 {
@@ -244,6 +263,7 @@ h1 {
     font-weight: bold;
     border: none;
     margin-top: 20px;
+    width: 30%;
 }
 
 .learn-more-btn:hover {
@@ -262,58 +282,56 @@ h1 {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease;
-    height: 350px; /* Fixed height for the carousel items */
+    height: 350px; /* Fixed height for carousel items */
+    width: 400px;
 }
 
-/* Show 1 full image and 1 half image */
-.carousel-inner {
-    display: flex;
-}
-
-.carousel-inner .carousel-item {
-    flex: 0 0 66.67%; /* 1 full image width */
-    margin-right: 10px;
-}
-
-.carousel-inner .carousel-item + .carousel-item {
-    flex: 0 0 33.33%; /* 1 half image width */
+.carousel-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 /* Black Overlay with Gradient */
 .carousel-image-wrapper .overlay {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     z-index: 2;
+    border: solid;
+    border-color: white;
+    border-radius: 20px;
 }
 
-/* Carousel Text Overlay */
+/* Carousel Text */
 .carousel-text {
     position: absolute;
-    bottom: 40px;
-    left: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    bottom: 50px;
+    left: 37%;
+    font-size: 1rem;
+    font-weight: normal;
     z-index: 3;
 }
 
 /* Carousel Button */
 .carousel-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffcc00;
     color: black;
     border-radius: 50%;
     padding: 15px;
-    font-size: 2rem;
+    font-size: 1rem;
     text-decoration: none;
     z-index: 3;
+    height: 50px;
+    width: 50px;
 }
 
 .carousel-btn:hover {
@@ -322,7 +340,6 @@ h1 {
 
 /* Custom Line Indicators */
 .carousel-line-indicators {
-    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -345,7 +362,7 @@ h1 {
     background-color: #e6b800;
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .properties-section {
         padding: 30px 0;
@@ -356,151 +373,18 @@ h1 {
     }
 
     .carousel-image-wrapper {
-        height: 250px;
+        height: 250px; /* Adjust height for smaller screens */
     }
 
-    .carousel-inner .carousel-item {
-        flex: 0 0 100%; /* Show full image on smaller screens */
+    .carousel-text {
+        bottom: 30px; /* Adjust text position */
     }
 
-    .carousel-inner .carousel-item + .carousel-item {
-        flex: 0 0 50%; /* Half image width on smaller screens */
+    .carousel-btn {
+        bottom: 10px; /* Adjust button position */
     }
 }
-
-
 
 
 
 
-/* .project-area-1 {
-    position: relative;
-    padding: 100px 0;
-    background: #333;
-}
-.project-title-wrap1 {
-    position: relative;
-    z-index: 2;
-}
-.shadow-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.1);
-    z-index: 1;
-}
-.project-number-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-.tab-btn {
-    background: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-.tab-btn:hover {
-    transform: scale(1.1);
-}
-.tab-btn.active {
-    background: #ffc107;
-    color: #000;
-}
-.slider-area {
-    position: relative;
-}
-.swiper-slide {
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-}
-.portfolio-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.portfolio-img img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-.icon-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #ffc107;
-    border-radius: 50%;
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.icon-btn img {
-    width: 15px;
-    height: 15px;
-}
-.arrow-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    background: #ffc107;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-.arrow-btn:hover {
-    transform: scale(1.2);
-}
-.arrow-btn img {
-    width: 20px;
-    height: 20px;
-}
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
