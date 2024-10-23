@@ -51,3 +51,9 @@ function goToSlide(n) {
     currentSlide = (n + totalSlides) % totalSlides;
     slides[currentSlide].classList.add('active');
 }
+
+
+
+
+
+

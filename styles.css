@@ -387,4 +387,428 @@ h1 {
 
 
 
+/* Global Section Style */
+.why-choose-section {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.why-choose-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.why-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    color: #ffcc00;
+}
+
+.hollow-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(255 255 255 / 0%);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    -webkit-text-stroke-color: #ffffff2b;
+    -webkit-text-stroke-width: 0.5px;
+
+}
+
+/* Icon Box Styles */
+.icon-box {
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: left;
+}
+
+.icon-wrapper {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    perspective: 1000px; /* Enables 3D flipping effect */
+}
+
+.icon {
+    width: 70%;
+    height: auto;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    margin-left: -150%;
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icon-box:hover .icon {
+    transform: rotateY(360deg); /* Flip icon on hover */
+}
+
+.icon-box h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.icon-box p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+.whytitlerow{
+    display: flex;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hollow-text {
+        font-size: 8rem;
+    }
+
+    .why-title {
+        font-size: 2rem;
+    }
+
+    .icon-box {
+        padding: 15px;
+    }
+}
+
+
+
+
+/* Global Section Style */
+.why-choose-section {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.why-choose-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.why-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    color: #ffcc00;
+}
+
+.hollow-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(255 255 255 / 0%);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    -webkit-text-stroke-color: #ffffff2b;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+/* Icon Box Styles */
+.icon-box {
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: left;
+}
+
+.icon-wrapper {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    perspective: 1000px; /* Enables 3D flipping effect */
+}
+
+.icon {
+    width: 70%;
+    height: auto;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    margin-left: -150%;
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icon-box:hover .icon {
+    transform: rotateY(360deg); /* Flip icon on hover */
+}
+
+.icon-box h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.icon-box p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    .hollow-text {
+        font-size: 8rem;
+    }
+
+    .why-title {
+        font-size: 2rem;
+    }
+
+    .why-choose-section p {
+        font-size: 1rem;
+    }
+
+    .icon-box {
+        padding: 15px;
+        margin-bottom: 20px;
+        text-align: left; /* Align text and icons to the left on mobile */
+    }
+
+    .icon-wrapper {
+        margin: 0 0 10px 0; /* Ensure icons stay to the left */
+    }
+
+    .icon {
+        margin-left: 0; /* Align icons left on mobile */
+    }
+
+    .icon-box h3 {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .icon-box p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
+    }
+
+    .why-choose-section {
+        padding: 30px 10px; /* Reduce padding for smaller devices */
+    }
+}
+
+/* Responsive Adjustments for Extra Small Screens */
+@media (max-width: 480px) {
+    .hollow-text {
+        font-size: 6rem; /* Smaller hollow text */
+    }
+
+    .why-title {
+        font-size: 1.8rem; /* Smaller section title */
+    }
+
+    .icon-box {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .icon-box h3 {
+        font-size: 1rem;
+    }
+
+    .icon-box p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+/* Offer Section Style */
+/* Custom Offer Section Style */
+.custom-offer-section {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Hollow Background Text */
+.custom-hollow-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05); /* Transparent effect */
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.custom-offer-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+    position: relative;
+    z-index: 2; /* Above hollow text */
+}
+
+.custom-offer-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2; /* Above hollow text */
+}
+
+/* Box Styling */
+.custom-offer-box {
+    position: relative;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease; /* Smoother transition */
+    display: flex;
+    justify-content: center;
+}
+
+.custom-box-content {
+    background-color: #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    width: 90%; /* Set width to maintain size consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease, transform 0.7s ease, background-image 0.7s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hover Effects */
+.custom-offer-box:hover .custom-box-content {
+    background-color: #1a1a1a; /* On hover, background changes to black */
+    transform: translateY(-10px); /* Slight hover lift */
+    background-image: url('path/to/your-image.jpg'), linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    background-blend-mode: overlay;
+}
+
+/* Consistent Box Sizing */
+.custom-box-content {
+    min-height: 320px; /* Consistent height */
+    max-height: 320px;
+}
+
+.custom-icon-wrapper {
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.custom-offer-icon {
+    width: 60px;
+    height: auto;
+}
+
+.custom-offer-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 0px;
+}
+
+/* Hide descriptions initially */
+.custom-description {
+    display: none;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.custom-offer-box:hover .custom-description {
+    display: block; /* Show description on hover */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .custom-hollow-text {
+        font-size: 4rem;
+    }
+
+    .custom-offer-title {
+        font-size: 2rem;
+    }
+
+    .custom-offer-section p {
+        font-size: 1rem;
+    }
+
+    .custom-offer-box {
+        margin-bottom: 20px;
+    }
+
+    .custom-box-content {
+        padding: 20px;
+    }
+
+    .custom-icon-wrapper {
+        height: 60px;
+    }
+
+    .custom-offer-icon {
+        width: 50px;
+    }
+
+    .custom-description {
+        font-size: 0.8rem;
+    }
+
+    .custom-box-content {
+        min-height: 250px; /* Adjust height for tablets */
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-hollow-text {
+        font-size: 3rem; /* Adjust hollow text for small screens */
+    }
+
+    .custom-offer-title {
+        font-size: 1.8rem;
+    }
+
+    .custom-box-content {
+        padding: 10px;
+        width: 100%; /* Full width for mobile */
+    }
+
+    .custom-icon-wrapper {
+        height: 50px;
+    }
+
+    .custom-offer-icon {
+        width: 40px;
+    }
+
+    .custom-description {
+        font-size: 0.7rem;
+    }
+
+    .custom-box-content {
+        min-height: 200px; /* Adjust height for mobile */
+        max-height: 200px;
+    }
+}
 
