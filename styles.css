@@ -36,10 +36,10 @@ body {
     height: 50px;
     width: auto;
 }
-.row{
+/* .row{
     margin-left: 10%;
     align-items: center;
-}
+} */
 
 /* Hero Section */
 
@@ -53,7 +53,7 @@ body {
 }
 
 .center-hero-image {
-    width: 1350px;
+    width: 1250px;
     height: 500px;
     /* border-radius: 50px; */
     /* object-fit: cover; */
@@ -636,11 +636,240 @@ h1 {
 
 
 
-/* Offer Section Style */
-/* Custom Offer Section Style */
-.custom-offer-section {
-    background-color: #000; /* Black background */
+/* Offer Calculation Section Style */
+/* Offer Calculation Section Style */
+.offer-calc-section {
+    background-image: url('assests/How\ We\ Calculate\ BG.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
     color: white;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer-calc-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    z-index: 0;
+}
+
+.offer-hollow-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgb(255 255 255 / 5%);
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    -webkit-text-stroke: #ffffff14;
+    -webkit-text-stroke-width: 1px;
+}
+
+.offer-calc-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.offer-calc-section p {
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Box Styling */
+.offer-calc-box {
+    position: relative;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.offer-calc-content {
+    background-color: #ffcc00;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 260px; /* Ensure the box size remains the same */
+    min-width: 260px;
+    min-height: 280px;
+    max-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0s ease, transform 0.7s ease, background-image 0.7s ease;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+/* Hover Effects */
+.offer-calc-box:hover .offer-calc-content {
+    background-color: transparent;
+    background-image: url('assests/Temp\ Bg.jpg'), linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
+    background-blend-mode: overlay;
+    transform: translateY(-10px);
+}
+
+/* Divider Line */
+.offer-divider {
+    width: 80px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    rotate: 90deg;
+    margin-bottom: 60px; /* Adjust the spacing */
+    transition: display 0.5s ease; /* Smooth transition */
+}
+
+.offer-calc-box:hover .offer-divider {
+    display: none; /* Hide divider line on hover */
+}
+
+/* Icon at the top */
+.offer-icon-wrapper {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.offer-calc-icon {
+    width: 50px; /* Adjust size */
+    height: auto;
+    margin-bottom: -45px;
+}
+
+/* Adjust H3 */
+.offer-calc-content h3 {
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Hide descriptions initially */
+.offer-description {
+    display: none;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.offer-calc-box:hover .offer-description {
+    display: block;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .offer-hollow-text {
+        font-size: 4rem;
+    }
+
+    .offer-calc-title {
+        font-size: 2rem;
+    }
+
+    .offer-calc-section p {
+        font-size: 1rem;
+    }
+
+    .offer-calc-box {
+        margin-bottom: 20px;
+    }
+
+    .offer-calc-content {
+        padding: 20px;
+        min-height: 250px;
+        max-height: 250px;
+    }
+
+    .offer-icon-wrapper {
+        height: 40px;
+    }
+
+    .offer-calc-icon {
+        width: 40px;
+    }
+
+    .offer-description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-hollow-text {
+        font-size: 3rem;
+    }
+
+    .offer-calc-title {
+        font-size: 1.8rem;
+    }
+
+    .offer-calc-content {
+        padding: 10px;
+        width: 100%;
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    .offer-icon-wrapper {
+        height: 40px;
+    }
+
+    .offer-calc-icon {
+        width: 35px;
+    }
+
+    .offer-description {
+        font-size: 0.7rem;
+    }
+}
+
+/* Full Page Responsiveness - Centering */
+@media (min-width: 1024px) {
+    .offer-calc-section {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Our Process Section Style */
+/* Our Process Section Style */
+.custom-process-section {
+    background-color: #ffcc00; /* Yellow background */
+    color: black;
     padding: 60px 20px;
     text-align: center;
     position: relative;
@@ -650,165 +879,173 @@ h1 {
 .custom-hollow-text {
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.05); /* Transparent effect */
     position: absolute;
-    top: 40px;
+    top: -30px; /* Inside the black box */
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+    -webkit-text-stroke: #ffffff38;
+    -webkit-text-stroke-width: 1px;
 }
 
-.custom-offer-title {
+.custom-process-title {
     font-size: 2.5rem;
     color: #ffcc00;
     font-weight: bold;
     position: relative;
-    z-index: 2; /* Above hollow text */
+    z-index: 2;
 }
 
-.custom-offer-section p {
+.custom-process-subtitle {
     font-size: 1.2rem;
     margin-bottom: 40px;
     position: relative;
-    z-index: 2; /* Above hollow text */
+    z-index: 2;
+    color: #ffffff;
 }
 
-/* Box Styling */
-.custom-offer-box {
+/* Black Box */
+.custom-process-black-box {
+    background-color: black;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 95%; /* Adjusted to stay centered */
+    width: 95%;
+    /* margin: auto; */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Process Box Styling */
+.custom-process-box {
     position: relative;
     margin-bottom: 30px;
-    transition: transform 0.5s ease; /* Smoother transition */
     display: flex;
     justify-content: center;
 }
 
 .custom-box-content {
-    background-color: #ffcc00;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    text-align: left;
     border-radius: 10px;
-    padding: 20px;
-    height: 100%;
-    width: 90%; /* Set width to maintain size consistency */
+    padding: 10px 15px; /* Reduced padding */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    transition: background-color 0.5s ease, transform 0.7s ease, background-image 0.7s ease;
-    background-size: cover;
-    background-position: center;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+    min-height: 180px;
 }
 
-/* Hover Effects */
-.custom-offer-box:hover .custom-box-content {
-    background-color: #1a1a1a; /* On hover, background changes to black */
-    transform: translateY(-10px); /* Slight hover lift */
-    background-image: url('path/to/your-image.jpg'), linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    background-blend-mode: overlay;
+/* Yellow Step Label Box */
+.custom-step-label {
+    background-color: #ffcc00;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: -22px;
+    left: 40px;
+    width: 140px;
+    text-align: center;
 }
 
-/* Consistent Box Sizing */
-.custom-box-content {
-    min-height: 320px; /* Consistent height */
-    max-height: 320px;
+.custom-box-content h3 {
+    margin-top: 20px; /* Reduced space below the yellow step label */
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
 }
 
-.custom-icon-wrapper {
-    height: 80px;
-    margin-bottom: 15px;
+.custom-box-content p {
+    font-family: inter;
+    font-size: 0.95rem;
+    font-weight: normal;
+    line-height: 1.4;
 }
 
-.custom-offer-icon {
-    width: 60px;
-    height: auto;
-}
-
-.custom-offer-row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-left: 0px;
-}
-
-/* Hide descriptions initially */
-.custom-description {
-    display: none;
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: white;
-}
-
-.custom-offer-box:hover .custom-description {
-    display: block; /* Show description on hover */
-}
-
-/* Mobile Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
     .custom-hollow-text {
         font-size: 4rem;
     }
 
-    .custom-offer-title {
+    .custom-process-title {
         font-size: 2rem;
     }
 
-    .custom-offer-section p {
+    .custom-process-subtitle {
         font-size: 1rem;
     }
 
-    .custom-offer-box {
-        margin-bottom: 20px;
-    }
-
     .custom-box-content {
-        padding: 20px;
+        padding: 10px;
+        min-height: 150px;
     }
 
-    .custom-icon-wrapper {
-        height: 60px;
+    .custom-step-label {
+        font-size: 1rem;
+        top: -20px;
+        left: 0px;
     }
 
-    .custom-offer-icon {
-        width: 50px;
+    .custom-box-content h3 {
+        font-size: 1.2rem;
     }
 
-    .custom-description {
-        font-size: 0.8rem;
+    .custom-box-content p {
+        font-size: 0.9rem;
     }
 
-    .custom-box-content {
-        min-height: 250px; /* Adjust height for tablets */
-        max-height: 250px;
+    .custom-process-black-box {
+        padding: 30px;
+        max-width: 90%; /* Adjusted for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .custom-hollow-text {
-        font-size: 3rem; /* Adjust hollow text for small screens */
+        font-size: 3rem;
     }
 
-    .custom-offer-title {
+    .custom-process-title {
         font-size: 1.8rem;
+    }
+
+    .custom-process-subtitle {
+        font-size: 0.9rem;
     }
 
     .custom-box-content {
         padding: 10px;
-        width: 100%; /* Full width for mobile */
+        min-height: 130px;
     }
 
-    .custom-icon-wrapper {
-        height: 50px;
+    .custom-step-label {
+        font-size: 0.9rem;
+        top: -20px;
+        left: 0px;
     }
 
-    .custom-offer-icon {
-        width: 40px;
+    .custom-box-content h3 {
+        font-size: 1.1rem;
     }
 
-    .custom-description {
-        font-size: 0.7rem;
+    .custom-box-content p {
+        font-size: 0.8rem;
     }
 
-    .custom-box-content {
-        min-height: 200px; /* Adjust height for mobile */
-        max-height: 200px;
+    .custom-process-black-box {
+        padding: 20px;
+        max-width: 95%; /* Wider black box on smaller screens */
     }
 }
+
+
+
 
