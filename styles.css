@@ -410,11 +410,11 @@ h1 {
 }
 
 .hollow-text {
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: bold;
     color: rgb(255 255 255 / 0%);
     position: absolute;
-    top: -40px;
+    top: -65px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -609,7 +609,8 @@ h1 {
 /* Responsive Adjustments for Extra Small Screens */
 @media (max-width: 480px) {
     .hollow-text {
-        font-size: 6rem; /* Smaller hollow text */
+        font-size: 4rem; /* Smaller hollow text */
+        top: -45px;
     }
 
     .why-title {
@@ -665,7 +666,7 @@ h1 {
 .offer-hollow-text {
     font-size: 6rem;
     font-weight: bold;
-    color: rgb(255 255 255 / 5%);
+    color: rgb(255 255 255 / 0%);
     position: absolute;
     top: -8px;
     left: 50%;
@@ -727,7 +728,13 @@ h1 {
     background-image: url('assests/Temp\ Bg.jpg'), linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
     background-blend-mode: overlay;
     transform: translateY(-10px);
+    color: white;
 }
+
+.offer-calc-box:hover h3{
+    color: white;
+}
+
 
 /* Divider Line */
 .offer-divider {
@@ -799,7 +806,7 @@ h1 {
 
     .offer-calc-content {
         padding: 20px;
-        min-height: 250px;
+        /* min-height: 250px; */
         max-height: 250px;
     }
 
@@ -818,7 +825,8 @@ h1 {
 
 @media (max-width: 480px) {
     .offer-hollow-text {
-        font-size: 3rem;
+        font-size: 4rem;
+        top: 15px;
     }
 
     .offer-calc-title {
@@ -828,7 +836,7 @@ h1 {
     .offer-calc-content {
         padding: 10px;
         width: 100%;
-        min-height: 200px;
+        /* min-height: 200px; */
         max-height: 200px;
     }
 
@@ -873,6 +881,10 @@ h1 {
     padding: 60px 20px;
     text-align: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; Full screen height */
 }
 
 /* Hollow Background Text */
@@ -880,7 +892,7 @@ h1 {
     font-size: 6rem;
     font-weight: bold;
     position: absolute;
-    top: -30px; /* Inside the black box */
+    top: -10px; /* Inside the black box */
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
@@ -909,11 +921,15 @@ h1 {
     background-color: black;
     border-radius: 20px;
     padding: 40px;
-    max-width: 95%; /* Adjusted to stay centered */
-    width: 95%;
-    /* margin: auto; */
+    padding-top: 60px;
+    width: 100%;
+    max-width: 800px; /* Fixed maximum width to maintain size */
+    margin: 0 auto; /* Center on screen */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Process Box Styling */
@@ -992,6 +1008,8 @@ h1 {
         font-size: 1rem;
         top: -20px;
         left: 0px;
+        width: auto; /* Adjust width for smaller screens */
+        padding: 5px 15px;
     }
 
     .custom-box-content h3 {
@@ -1030,6 +1048,8 @@ h1 {
         font-size: 0.9rem;
         top: -20px;
         left: 0px;
+        width: auto; /* Adjust width for smaller screens */
+        padding: 5px 15px;
     }
 
     .custom-box-content h3 {
@@ -1046,6 +1066,509 @@ h1 {
     }
 }
 
+/* Full Page Responsiveness - Centering */
+@media (min-width: 1024px) {
+    .custom-process-black-box {
+        max-width: 1400px; /* Fixed maximum width for centering */
+    }
+}
 
 
 
+
+
+
+
+
+
+
+
+
+/* Unique Housing Situations Section */
+.unique-housing-situations-section {
+    background-color: #000;
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hollow Text */
+.unique-hollow-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgb(255 255 255 / 0%);
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    -webkit-text-stroke-color: #ffffff2b;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+.unique-housing-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+.unique-housing-subtitle {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+/* Housing Box Styling */
+.unique-housing-box {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Link Styling */
+.unique-housing-link {
+    text-decoration: none;
+    color: white;
+}
+
+.unique-housing-image-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unique-housing-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+/* Shine Effect */
+.unique-housing-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%; /* Start position off-screen */
+    width: 200%; /* Larger than the container */
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transform: skewX(-45deg); /* Diagonal angle */
+    transition: all 0.6s ease; /* Adjust speed for smoothness */
+    pointer-events: none;
+}
+
+.unique-housing-box:hover .unique-housing-image-wrapper::before {
+    left: 100%; /* Move it across to the right */
+    opacity: 1; /* Make the shine visible */
+}
+
+.unique-housing-box:hover .unique-housing-image-wrapper {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.unique-housing-caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .unique-hollow-text {
+        font-size: 5rem;
+    }
+
+    .unique-housing-title {
+        font-size: 2rem;
+    }
+
+    .unique-housing-subtitle {
+        font-size: 1rem;
+    }
+
+    .unique-housing-caption {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .unique-hollow-text {
+        font-size: 4rem;
+    }
+
+    .unique-housing-title {
+        font-size: 1.8rem;
+    }
+
+    .unique-housing-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .unique-housing-caption {
+        font-size: 0.9rem;
+    }
+}
+
+/* Centering for Full Page Responsiveness */
+@media (min-width: 1024px) {
+    .unique-housing-situations-section .container-fluid {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+/* About Us Section */
+.about-section-custom {
+    background-color: #000;
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Left-Aligned Title and Subtitle */
+.about-header-left {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.about-hollow-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgb(255 255 255 / 0%);
+    position: absolute;
+    top: -73px;
+    left: 15px;
+    transform: translateX(-5%);
+    z-index: 1;
+    -webkit-text-stroke: 1px #ffffff38;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+    width: 150%;
+}
+
+/* Image Row */
+.about-image-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Image Box */
+.about-image-box {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 45%;
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Shine Effect */
+.about-shine-effect {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 400%;
+    height: 400%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.3s, top 0.6s ease, left 0.6s ease;
+}
+
+.about-image-wrapper:hover .about-shine-effect {
+    opacity: 1;
+    top: 100%;
+    left: 100%;
+}
+
+.about-image-box:hover .about-image-wrapper {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Bullet Points */
+.about-bullet-points {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-bullet-points li {
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: relative;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.about-bullet-points li::before {
+    content: '•';
+    color: #ffcc00;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hollow-text {
+        font-size: 4rem;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1rem;
+    }
+
+    .about-image-box {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .about-bullet-points li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hollow-text {
+        font-size: 3rem;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .about-bullet-points li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Centering and Width Constraint */
+@media (min-width: 1024px) {
+    .about-section-custom .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Comparison Section */
+.comparison-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: black;
+    padding: 60px 20px;
+    overflow: hidden;
+    /* background: rgb(255,204,0); */
+    background: linear-gradient(90deg, rgba(255,204,0,1) 50%, rgba(0,0,0,1) 50%);   
+    padding-bottom: 0px;
+}
+
+/* Background Split */
+.comparison-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.comparison-column {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 85px;
+}
+
+/* Background colors for each side */
+/* .comparison-left {
+    background-color: #ffcc00;
+} */
+
+.comparison-right {
+    /* background-color: #000; */
+    color: white;
+}
+
+
+
+/* Title and Subtitle */
+.comparison-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    top: -80px;
+    left: 0.5%;
+}
+
+.title-part-black {
+    color: black;
+}
+
+.title-part-yellow {
+    color: #ffcc00;
+}
+
+
+.comparison-header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+/* List Styling */
+.comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.comparison-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* .comparison-list li::before {
+    content: "✔";
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin-right: 10px;
+} */
+
+/* Center Image */
+.comparison-center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 200px;
+}
+
+.comparison-center-image img {
+    width: 100%;
+    height: auto;
+    margin-top: -460px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .comparison-container {
+        flex-direction: column;
+    }
+
+    .comparison-column {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .comparison-left {
+        background-color: #ffcc00;
+    }
+
+    .comparison-right {
+        background-color: black;
+    }
+
+    .comparison-header {
+        text-align: center;
+    }
+
+    .comparison-hollow-text {
+        font-size: 4rem;
+    }
+
+    .comparison-title {
+        font-size: 2rem;
+    }
+
+    .comparison-list li {
+        font-size: 0.9rem;
+    }
+
+    .comparison-center-image {
+        display: none; /* Hide on mobile */
+    }
+}
