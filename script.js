@@ -33,7 +33,7 @@ $('#cashOfferForm').on('submit', function (event) {
 });
 
 
-
+// Explore Properties 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
@@ -54,6 +54,40 @@ function goToSlide(n) {
 
 
 
+
+
+
+
+// Client Feedback
+let feedbackCurrentIndex = 0;
+const feedbackSlideContainer = document.querySelector(".carousel-slide");
+const feedbackCards = document.querySelectorAll(".feedback-card");
+const totalFeedbackPairs = Math.ceil(feedbackCards.length / 2); // Show 2 cards per view
+
+function showNextFeedback() {
+    feedbackCurrentIndex = (feedbackCurrentIndex + 1) % totalFeedbackPairs;
+    updateFeedbackDisplay();
+}
+
+function showPrevFeedback() {
+    feedbackCurrentIndex = (feedbackCurrentIndex - 1 + totalFeedbackPairs) % totalFeedbackPairs;
+    updateFeedbackDisplay();
+}
+
+function updateFeedbackDisplay() {
+    feedbackSlideContainer.style.transform = `translateY(-${feedbackCurrentIndex * 100}%)`;
+}
+
+setInterval(showNextFeedback, 5000); // Auto-rotate every 5 seconds
+
+// Video Overlay Functions
+function openVideo() {
+    document.getElementById("videoOverlay").style.display = "flex";
+}
+
+function closeVideo() {
+    document.getElementById("videoOverlay").style.display = "none";
+}
 
 
 
