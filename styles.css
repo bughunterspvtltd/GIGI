@@ -732,7 +732,7 @@ h1 {
 }
 
 .offer-calc-box:hover h3{
-    color: white;
+    color: #ffcc00;
 }
 
 
@@ -1028,15 +1028,17 @@ h1 {
 
 @media (max-width: 480px) {
     .custom-hollow-text {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .custom-process-title {
         font-size: 1.8rem;
+        top: 15px;
     }
 
     .custom-process-subtitle {
         font-size: 0.9rem;
+        top: 12px;
     }
 
     .custom-box-content {
@@ -1210,6 +1212,7 @@ h1 {
 @media (max-width: 480px) {
     .unique-hollow-text {
         font-size: 4rem;
+        top: 13px;
     }
 
     .unique-housing-title {
@@ -1391,7 +1394,8 @@ h1 {
 
 @media (max-width: 480px) {
     .about-hollow-text {
-        font-size: 3rem;
+        font-size: 4rem;
+        top: -48px;
     }
 
     .about-title {
@@ -1399,7 +1403,8 @@ h1 {
     }
 
     .about-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        width: 350px;
     }
 
     .about-bullet-points li {
@@ -1575,6 +1580,64 @@ h1 {
 }
 
 
+/* Responsive Design */
+@media (max-width: 480px) {
+    .comparison-container {
+        flex-direction: column;
+    }
+
+    .comparison-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: black;
+        padding: 60px 20px;
+        overflow: hidden;
+        background: rgb(255,204,0);
+        /* background: linear-gradient(90deg, rgba(255,204,0,1) 50%, rgba(0,0,0,1) 50%);    */
+        padding-bottom: 30px;
+    }
+
+    .comparison-column {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .comparison-left {
+        background-color: #ffcc00;
+        margin: auto;
+    }
+
+    .comparison-right {
+        background-color: black;
+        margin: auto;
+    }
+
+    .comparison-header {
+        text-align: center;
+    }
+
+    .comparison-hollow-text {
+        font-size: 4rem;
+    }
+
+    .comparison-title {
+        font-size: 1rem;
+        background: linear-gradient(90deg, rgba(255, 204, 0, 1) 50%, rgba(0, 0, 0, 1) 50%);
+        margin-top: 20px;
+    }
+
+    .comparison-list li {
+        font-size: 0.9rem;
+    }
+
+    .comparison-center-image {
+        display: none; /* Hide on mobile */
+    }
+}
+
+
 
 
 
@@ -1603,7 +1666,7 @@ h1 {
     color: rgba(255, 255, 255, 0.05);
     position: absolute;
     top: -42px;
-    left: 10%;
+    /* left: 15%; */
     -webkit-text-stroke: 1px #ffffff24;
 }
 
@@ -1715,7 +1778,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
@@ -1837,7 +1900,7 @@ h1 {
 }
 
 .footer-links h3, .footer-blog h3, .footer-contact h3 {
-    color: #ffcc00;
+    color: #ffffff;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -1846,6 +1909,7 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: 25px;
 }
 
 .footer-links li, .footer-blog li, .footer-contact li {
@@ -1870,6 +1934,14 @@ h1 {
     color: #fff;
 }
 
+.footer-blog a:hover {
+    color: #ffcc00;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
 .footer-contact img {
     width: 20px;
     height: 20px;
@@ -1885,6 +1957,8 @@ h1 {
     font-size: 0.9rem;
     color: #999;
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
