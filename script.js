@@ -59,31 +59,50 @@ function goToSlide(n) {
 
 
 // Feedback Carousel Functionality
+// Feedback Carousel Functionality
 let currentFeedbackIndex = 0;
 const feedbackSlideContainer = document.querySelector(".carousel-slide");
 const feedbackCards = document.querySelectorAll(".feedback-card");
-const feedbackCardsPerView = 2; // Number of cards to show per view
-const totalFeedbackSlides = Math.ceil(feedbackCards.length / feedbackCardsPerView);
 
-function showNextFeedback() {
-    currentFeedbackIndex = (currentFeedbackIndex + 1) % totalFeedbackSlides;
-    updateFeedbackDisplay();
+// Check if feedback cards and carousel controls exist
+if (feedbackSlideContainer && feedbackCards.length > 0) {
+    const cardHeight = feedbackCards[0].offsetHeight + 20; // Includes card margin
+    const totalFeedbackSlides = Math.ceil(feedbackCards.length / 2);
+
+    function showNextFeedback() {
+        currentFeedbackIndex = (currentFeedbackIndex + 1) % totalFeedbackSlides;
+        updateFeedbackDisplay();
+    }
+
+    function showPrevFeedback() {
+        currentFeedbackIndex = (currentFeedbackIndex - 1 + totalFeedbackSlides) % totalFeedbackSlides;
+        updateFeedbackDisplay();
+    }
+
+    function updateFeedbackDisplay() {
+        feedbackSlideContainer.style.transform = `translateY(-${currentFeedbackIndex * cardHeight * 2}px)`;
+    }
+
+    // Add event listeners if controls are present
+    const nextButton = document.querySelector(".carousel-next");
+    const prevButton = document.querySelector(".carousel-prev");
+
+    if (nextButton) nextButton.addEventListener("click", showNextFeedback);
+    if (prevButton) prevButton.addEventListener("click", showPrevFeedback);
+
+    // Auto-rotate every 5 seconds
+    setInterval(showNextFeedback, 5000);
 }
 
-function showPrevFeedback() {
-    currentFeedbackIndex = (currentFeedbackIndex - 1 + totalFeedbackSlides) % totalFeedbackSlides;
-    updateFeedbackDisplay();
+// Video Overlay Functions
+function openVideo() {
+    document.getElementById("videoOverlay").style.display = "flex";
 }
 
-function updateFeedbackDisplay() {
-    const cardHeight = feedbackCards[0].offsetHeight + 10; // Card height with margin
-    feedbackSlideContainer.style.transform = `translateY(-${currentFeedbackIndex * cardHeight * feedbackCardsPerView}px)`;
+function closeVideo() {
+    document.getElementById("videoOverlay").style.display = "none";
 }
 
-document.querySelector(".carousel-next").addEventListener("click", showNextFeedback);
-document.querySelector(".carousel-prev").addEventListener("click", showPrevFeedback);
-
-setInterval(showNextFeedback, 5000); // Auto-rotate every 5 seconds
 
 
 
