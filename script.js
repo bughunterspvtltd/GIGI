@@ -34,23 +34,44 @@ $('#cashOfferForm').on('submit', function (event) {
 
 
 // Explore Properties 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+// Explore Properties Carousel
+const slides = document.querySelectorAll('.carousel-item');
+const indicators = document.querySelectorAll('.carousel-line-indicators span');
+let currentIndex = 0;
 
-document.querySelector('.next').addEventListener('click', function() {
-    goToSlide(currentSlide + 1);
-});
-
-document.querySelector('.prev').addEventListener('click', function() {
-    goToSlide(currentSlide - 1);
-});
-
-function goToSlide(n) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (n + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
+function showSlide(index) {
+    const totalSlides = slides.length;
+    currentIndex = (index + totalSlides) % totalSlides; // Handle wraparound
+    const offset = -currentIndex * (slides[0].offsetWidth + 20); // Adjust for margin-right (20px)
+    document.querySelector('.carousel-track').style.transform = `translateX(${offset}px)`;
+    updateIndicators();
 }
+
+function updateIndicators() {
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    indicators[currentIndex].classList.add('active');
+}
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        showSlide(index);
+    });
+});
+
+// Carousel Controls
+document.querySelector('.carousel-control.prev').addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+});
+document.querySelector('.carousel-control.next').addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+});
+
+// Auto-slide every 5 seconds
+setInterval(() => {
+    showSlide(currentIndex + 1);
+}, 5000);
+
+
 
 
 
