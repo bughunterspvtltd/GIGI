@@ -156,74 +156,72 @@
 
     
 
-<!-- Explore Property -->
-    <section class="properties-section">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Left Static Content (50%) -->
-                <div class="col-lg-6 col-md-12 left-section">
-                    <h1 class="featured-title">Featured</h1>
-                    <h2>Explore Our Premier Properties</h2>
-                    <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
-                    <a href="#" class="btn btn-warning learn-more-btn">Learn More →</a>
-                </div>
-    
-                <!-- Right Custom Carousel (50%) -->
-                <div class="col-lg-6 col-md-12 right-section">
-                    <div id="propertyCarousel" class="custom-carousel">
-                        <div class="carousel-track">
-                            <!-- First Slide -->
-                            <div class="carousel-item">
-                                <div class="carousel-image-wrapper">
-                                    <img src="YT Thumbnail.svg" class="d-block w-100" alt="Townhouses">
-                                    <div class="overlay"></div>
-                                    <p class="carousel-text">Townhouses</p>
-                                    <a href="townhouses.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                                </div>
-                            </div>
-                            <!-- Second Slide -->
-                            <div class="carousel-item">
-                                <div class="carousel-image-wrapper">
-                                    <img src="YT Thumbnail.svg" class="d-block w-100" alt="Luxury Villa">
-                                    <div class="overlay"></div>
-                                    <p class="carousel-text">Luxury Villa</p>
-                                    <a href="luxury-villa.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                                </div>
-                            </div>
-                            <!-- Third Slide -->
-                            <div class="carousel-item">
-                                <div class="carousel-image-wrapper">
-                                    <img src="YT Thumbnail.svg" class="d-block w-100" alt="Beach House">
-                                    <div class="overlay"></div>
-                                    <p class="carousel-text">Beach House</p>
-                                    <a href="beach-house.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                                </div>
-                            </div>
-                            <!-- Fourth Slide -->
-                            <div class="carousel-item">
-                                <div class="carousel-image-wrapper">
-                                    <img src="YT Thumbnail.svg" class="d-block w-100" alt="Penthouse">
-                                    <div class="overlay"></div>
-                                    <p class="carousel-text">Penthouse</p>
-                                    <a href="penthouse.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                                </div>
+<!-- Properties Section -->
+<section class="properties-section">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Static Content (50%) -->
+            <div class="col-lg-6 col-md-12 left-section">
+                <h1 class="featured-title">Featured</h1>
+                <h2>Explore Our Premier Properties</h2>
+                <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
+                <a href="#" class="btn btn-warning learn-more-btn">Learn More →</a>
+            </div>
+
+            <!-- Right Carousel (50%) -->
+            <div class="col-lg-6 col-md-12">
+                <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <!-- First Slide -->
+                        <div class="carousel-item active">
+                            <div class="carousel-image-wrapper">
+                                <img src="assests/Explore Property 1.svg" class="d-block w-100" alt="Townhouses">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Townhouses</p>
+                                <a href="townhouses.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
                             </div>
                         </div>
-                        <!-- Carousel Controls -->
-                        <button class="carousel-control prev">&#9664;</button>
-                        <button class="carousel-control next">&#9654;</button>
-                        <!-- Carousel Indicators (Custom Lines) -->
-                        <div class="carousel-line-indicators">
-                            <span data-index="0" class="active"></span>
-                            <span data-index="1"></span>
-                            <span data-index="2"></span>
-                            <span data-index="3"></span>
+                        <!-- Second Slide -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="assests/Explore Property 2.svg" class="d-block w-100" alt="Luxury Villa">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Luxury Villa</p>
+                                <a href="luxury-villa.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                            </div>
                         </div>
+                        <!-- Third Slide -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="assests/About Us 1.svg" class="d-block w-100" alt="Modern Home">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Modern Home</p>
+                                <a href="modern-home.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                            </div>
+                        </div>
+                        <!-- Fourth Slide -->
+                        <div class="carousel-item">
+                            <div class="carousel-image-wrapper">
+                                <img src="assests/About Us 2.svg" class="d-block w-100" alt="Vintage Estate">
+                                <div class="overlay"></div>
+                                <p class="carousel-text">Vintage Estate</p>
+                                <a href="vintage-estate.html" class="carousel-btn"><img src="assests/White Arrow.svg" alt="Arrow"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Indicators (Line) -->
+                    <div class="carousel-line-indicators">
+                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="0" class="active"></span>
+                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="1"></span>
+                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="2"></span>
+                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="3"></span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     
     
     
@@ -448,7 +446,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 unique-housing-box">
-                <a href="divorce-or-separation.html" target="_blank" class="unique-housing-link">
+                <a href="divorce and seperation.html" target="_blank" class="unique-housing-link">
                     <div class="unique-housing-image-wrapper">
                         <img src="assests/Divorce or Separation.svg" alt="Divorce or Separation" class="unique-housing-image">
                     </div>

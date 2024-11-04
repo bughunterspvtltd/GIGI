@@ -371,20 +371,14 @@ body {
 
 
 
-/* General Fixes for Horizontal Scroll */
-body, html {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Explore Properties */
 .properties-section {
     background-color: #000; /* Dark background */
     color: white;
     padding: 50px 0;
-    width: 100%;
+    position: relative; /* Ensures proper positioning for z-index */
+    z-index: 1;
 }
 
 .left-section {
@@ -397,7 +391,7 @@ body, html {
 .left-section h1.featured-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #ffcc00; /* Yellow color for 'Featured' */
+    color: #ffcc00;
 }
 
 .left-section h2 {
@@ -425,39 +419,25 @@ body, html {
     color: black;
 }
 
-/* Aligning Left and Right Section Horizontally */
-.properties-section .row {
+/* Custom Carousel Styling */
+.carousel-inner {
     display: flex;
-    align-items: center; /* Vertically align the sections */
-    justify-content: space-between;
-}
-
-/* Custom Carousel */
-.custom-carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
-    min-width: 80%; /* 80% width to show part of the next slide */
-    margin-right: 20px;
     position: relative;
     text-align: center;
+    color: white;
+    z-index: 5; /* Bring each slide on top */
 }
 
 .carousel-image-wrapper {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    height: 350px;
-    width: 100%;
+    height: 350px; /* Fixed height for carousel items */
+    width: 400px;
 }
 
 .carousel-image-wrapper img {
@@ -465,12 +445,12 @@ body, html {
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
-    display: block !important; /* Ensure the images are displayed */
+    border: 2px solid white;
 }
 
 /* Black Overlay with Gradient */
 .carousel-image-wrapper .overlay {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -486,52 +466,35 @@ body, html {
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 1.2rem;
     z-index: 3;
 }
 
-/* Carousel Button */
+/* Carousel Button (without arrow icon now) */
 .carousel-btn {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffcc00;
     color: black;
     border-radius: 50%;
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration: none;
     z-index: 3;
     height: 50px;
     width: 50px;
 }
 
+.carousel-btn img {
+    border: 0px;
+    align-items: center;
+
+}
+
 .carousel-btn:hover {
     background-color: #e6b800;
-}
-
-/* Carousel Controls */
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffcc00;
-    border: none;
-    padding: 15px;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carousel-control.prev {
-    left: 0;
-}
-
-.carousel-control.next {
-    right: 0;
 }
 
 /* Custom Line Indicators */
@@ -547,7 +510,6 @@ body, html {
     height: 5px;
     background-color: #ffcc00;
     margin: 0 5px;
-    transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
@@ -555,22 +517,14 @@ body, html {
     background-color: white;
 }
 
-.carousel-line-indicators span:hover {
-    background-color: #e6b800;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .properties-section {
-        padding: 30px 0;
-    }
-
     .left-section h2 {
         font-size: 2.5rem;
     }
 
     .carousel-image-wrapper {
-        height: 250px;
+        height: 250px; /* Adjust height for smaller screens */
     }
 
     .carousel-text {
@@ -580,11 +534,36 @@ body, html {
     .carousel-btn {
         bottom: 10px;
     }
+}
 
-    .properties-section .row {
-        flex-direction: column;
+@media (max-width: 480px) {
+    .left-section h1.featured-title {
+        font-size: 1.5rem;
+    }
+
+    .left-section h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-image-wrapper {
+        height: 200px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-text {
+        font-size: 0.8rem;
+    }
+
+    .carousel-line-indicators span {
+        width: 30px;
     }
 }
+
 
 
 
@@ -2204,5 +2183,130 @@ body, html {
     
     .footer-bottom p {
         font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #ffcc00;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+section ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Content Row for Alternating Layout */
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-placeholder {
+    flex: 1;
+    height: 250px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #888;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    .text {
+        padding: 10px;
     }
 }
