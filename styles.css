@@ -2885,142 +2885,133 @@ body {
 
 
 /* Inheritance Section Wrapper */
-.inheritance-section {
+.inheritance-custom-section {
     padding: 40px 20px;
     background-color: #f8f8f8;
     display: flex;
     justify-content: center;
 }
 
-.inheritance-container {
+.inheritance-custom-container {
     max-width: 1200px; /* Limit the maximum width */
     width: 100%;
     margin: 0 auto; /* Center the content */
 }
 
 /* Common Styles for Text and Images */
-.inheritance-text {
+.inheritance-custom-text {
     width: 55%;
     padding: 20px;
 }
 
-.inheritance-image {
+.inheritance-custom-image {
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.inheritance-image img {
+.inheritance-custom-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.inheritance-process, 
-.inheritance-legal-steps, 
-.inheritance-property-value, 
-.inheritance-taxes, 
-.inheritance-selling {
+.inheritance-custom-process, 
+.inheritance-custom-legal-steps, 
+.inheritance-custom-property-value, 
+.inheritance-custom-taxes, 
+.inheritance-custom-selling {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 }
 
-.inheritance-process:nth-child(odd),
-.inheritance-legal-steps:nth-child(even),
-.inheritance-property-value:nth-child(odd),
-.inheritance-taxes:nth-child(even),
-.inheritance-selling:nth-child(odd) {
+.inheritance-custom-process:nth-child(odd),
+.inheritance-custom-legal-steps:nth-child(even),
+.inheritance-custom-property-value:nth-child(odd),
+.inheritance-custom-taxes:nth-child(even),
+.inheritance-custom-selling:nth-child(odd) {
     flex-direction: row-reverse;
 }
 
-h2, h3 {
+.inheritance-title, .inheritance-heading, .inheritance-paragraph {
     color: #000;
 }
 
-h2 {
+.inheritance-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
-h3 {
+.inheritance-heading {
     font-size: 1.7rem;
     margin-bottom: 15px;
 }
 
-p {
+.inheritance-paragraph {
     color: #333;
     line-height: 1.8;
     font-size: 1.1rem;
 }
 
 /* Shadow Effect for Text Containers */
-.inheritance-text {
+.inheritance-custom-text {
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .inheritance-text, .inheritance-image {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .inheritance-custom-process, 
+    .inheritance-custom-legal-steps, 
+    .inheritance-custom-property-value, 
+    .inheritance-custom-taxes, 
+    .inheritance-custom-selling {
+        flex-direction: column;
+    }
+
+    .inheritance-custom-text {
         width: 100%;
     }
 
-    .inheritance-text {
-        margin-bottom: 30px;
+    .inheritance-custom-image {
+        width: 100%;
+        margin-top: 20px;
     }
 
-    .inheritance-process, 
-    .inheritance-legal-steps, 
-    .inheritance-property-value, 
-    .inheritance-taxes, 
-    .inheritance-selling {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
+    .inheritance-heading {
         font-size: 1.5rem;
     }
 
-    p {
+    .inheritance-paragraph {
         font-size: 1rem;
-    }
-
-    .inheritance-text {
-        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    h2 {
+    .inheritance-title {
         font-size: 1.8rem;
     }
 
-    h3 {
+    .inheritance-heading {
         font-size: 1.3rem;
     }
 
-    p {
+    .inheritance-paragraph {
         font-size: 0.9rem;
     }
 
-    .inheritance-text {
+    .inheritance-custom-text {
         padding: 15px;
     }
 
-    .inheritance-image img {
+    .inheritance-custom-image img {
         border-radius: 5px;
     }
 }
