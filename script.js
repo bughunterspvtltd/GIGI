@@ -16,21 +16,15 @@ $(document).ready(function () {
 });
 
 
-// Form Validation Placeholder
-$('#cashOfferForm').on('submit', function (event) {
-    event.preventDefault();
-    const address = $('#address').val();
-    const name = $('#name').val();
-    const phone = $('#phone').val();
-    const email = $('#email').val();
-    const terms = $('#terms').is(':checked');
 
-    if (address && name && phone && email && terms) {
-        alert('Form is valid! Add SMTP later.');
-    } else {
-        alert('Please fill in all fields and accept the terms.');
-    }
-});
+
+
+
+
+
+
+
+
 
 
 // Explore Properties 

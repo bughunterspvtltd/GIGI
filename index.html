@@ -54,7 +54,7 @@
                             <li><a class="dropdown-item" href="Facing Foreclosure.html">Facing Foreclosure</a></li>
                             <li><a class="dropdown-item" href="divorce and seperation.html">Divorce or Separation</a></li>
                             <li><a class="dropdown-item" href="Inherited Property.html">Inherited Property</a></li>
-                            <li><a class="dropdown-item" href="#">Financial Difficulties</a></li>
+                            <li><a class="dropdown-item" href="Financial Difficulties.html">Financial Difficulties</a></li>
                             <li><a class="dropdown-item" href="#">Relocation</a></li>
                             <li><a class="dropdown-item" href="#">Homes Needing Repairs</a></li>
                         </ul>
@@ -109,23 +109,26 @@
                 <h2>Get Your Free Cash Offer</h2>
                 <p>No commitments, just a free estimate</p>
                 <form id="cashOfferForm">
-                    <input type="text" class="form-control" placeholder="Address" required>
-                    <input type="text" class="form-control" placeholder="Name" required>
-                    <input type="text" class="form-control" placeholder="Phone" required>
-                    <input type="email" class="form-control" placeholder="Email" required>
+                    <input type="text" class="form-control" id="address" placeholder="Address" required>
+                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                    <input type="number" class="form-control" id="phone" placeholder="Phone" required>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" required>
-                        <label class="form-check-label">I have read and accepted the Terms & Conditions and Privacy Statement.</label>
+                        <input type="checkbox" id="terms" class="form-check-input" required>
+                        <label class="form-check-label" for="terms">I have read and accepted the Terms & Conditions and Privacy Statement.</label>
                     </div>
                     <button type="submit" class="btn btn-warning w-100">Submit</button>
                 </form>
             </div>
+
+
         </div>
     </div>
 
     <!-- Scroll to Bottom Button -->
     <div class="scroll-to-bottom">
-        <a href="#bottom">↓</a>
+        <!-- <a href="#bottom">↓</a> -->
+        <a href="#bottom">← Scroll</a>
     </div>
 </header>
 </section>
@@ -170,6 +173,7 @@
             <div class="col-lg-6 col-md-12 left-section">
                 <h1 class="featured-title">Featured</h1>
                 <h2>Explore Our Premier Properties</h2>
+                <span class="hollow-properties-text">PROPERTIES</span>
                 <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
                 <a href="#" class="btn btn-warning learn-more-btn">Learn More →</a>
             </div>
@@ -441,7 +445,7 @@
     <div class="container-fluid text-center">
         <h2 class="unique-housing-title">Solving Various Housing Situations</h2>
         <span class="unique-hollow-text">SITUATION</span>
-        <p class="unique-housing-subtitle">Our Simple 4-Step Process</p>
+        <p class="unique-housing-subtitle">We buy houses in any situation, offering homeowners a quick, hassle-free sale.</p>
 
         <div class="row justify-content-center">
             <!-- Each Image Box with Caption -->
@@ -769,6 +773,48 @@
 
 
 
+
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                // Wait until the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+
+        // Select the form element
+        const form = document.getElementById('cashOfferForm');
+
+        // Add event listener for form submission
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get form values
+            const address = document.getElementById('address').value.trim();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const termsAccepted = document.getElementById('terms').checked;
+
+            // Basic validation
+            if (!address || !name || !phone || !email || !termsAccepted) {
+                alert("Please fill in all fields and accept the terms.");
+                return;
+            }
+
+            // Send email using SMTP.js
+            Email.send({
+                SecureToken: "ab37c0a3-817c-4c0e-8e05-33da81730e0b", // Replace with your SMTP.js secure token
+                To: "testwithbughunters@gmail.com", // Where you want the email to be sent
+                From: "testwithbughunters@gmail.com", // Your email
+                Subject: "New Cash Offer Request",
+                Body: "And this is the body"
+            }).then(
+                message => alert("Form submitted successfully!"),
+                error => alert("Error submitting form: " + error)
+            );
+        });
+        });
+
+    </script>
 
 
 

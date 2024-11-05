@@ -62,6 +62,7 @@ body {
     color: white;
     padding: 60px 0;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 /* Centered Overlay Hero Image */
@@ -106,9 +107,7 @@ body {
     font-weight: bold;
 }
 
-.highlight {
-    color: #ffcc00;
-}
+
 
 .arrow-container {
     position: absolute;
@@ -126,6 +125,7 @@ body {
 .description {
     font-size: 1rem;
     margin-bottom: 20px;
+    font-family: 'Inter';
 }
 
 .gigi-bg {
@@ -146,7 +146,7 @@ body {
 
 /* Form Container */
 .form-container {
-    background: rgba(48, 47, 47, 0.9);
+    background: rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 8px;
     border: 2px solid #ffcc00;
@@ -222,14 +222,15 @@ body {
 /* Scroll to Bottom Button */
 .scroll-to-bottom {
     position: absolute;
-    right: 15px;
-    bottom: 30%;
+    right: 0%;
+    bottom: 36%;
+    transform: translateY(-50%) rotate(-90deg);
 }
 
 .scroll-to-bottom a {
     color: white;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .scroll-to-bottom a:hover {
@@ -403,6 +404,10 @@ body {
     font-weight: bold;
 }
 
+.stats-section p {
+    font-family: 'Inter';
+}
+
 @media (max-width: 768px) {
     .stats-section .counter {
         font-size: 1rem;
@@ -431,6 +436,20 @@ body {
     z-index: 1;
 }
 
+.hollow-properties-text {
+    font-family: 'inter';
+    font-size: 6rem;
+    font-weight: bold;
+    color: rgb(255 255 255 / 0%);
+    position: absolute;
+    top: -27px;
+    left: 23%;
+    transform: translateX(-50%);
+    z-index: 1;
+    -webkit-text-stroke-color: #ffffff2b;
+    -webkit-text-stroke-width: 0.5px;
+}
+
 .left-section {
     display: flex;
     flex-direction: column;
@@ -451,7 +470,8 @@ body {
 
 .left-section p {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-family: 'Inter';
 }
 
 .learn-more-btn {
@@ -639,6 +659,7 @@ body {
 .why-choose-section p {
     font-size: 1.2rem;
     margin-bottom: 40px;
+    font-family: 'Inter';
 }
 
 .why-title {
@@ -650,17 +671,17 @@ body {
 }
 
 .hollow-text {
+    font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
     color: rgb(255 255 255 / 0%);
     position: absolute;
-    top: -65px;
+    top: -56px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     -webkit-text-stroke-color: #ffffff2b;
     -webkit-text-stroke-width: 0.5px;
-
 }
 
 /* Icon Box Styles */
@@ -904,6 +925,7 @@ body {
 }
 
 .offer-hollow-text {
+    font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
     color: rgb(255 255 255 / 0%);
@@ -912,8 +934,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    -webkit-text-stroke: #ffffff14;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke: #ffffff2b;
+    -webkit-text-stroke-width: 0.5px;
 }
 
 .offer-calc-title {
@@ -925,7 +947,8 @@ body {
 }
 
 .offer-calc-section p {
-    font-size: 0.9rem;
+    font-family: 'Inter';
+    font-size: 1rem;
     margin-bottom: 40px;
     position: relative;
     z-index: 2;
@@ -1024,6 +1047,7 @@ body {
 
 .offer-calc-box:hover .offer-description {
     display: block;
+    font-family: 'Inter';
 }
 
 /* Mobile Adjustments */
@@ -1129,15 +1153,16 @@ body {
 
 /* Hollow Background Text */
 .custom-hollow-text {
+    font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
     position: absolute;
-    top: -10px; /* Inside the black box */
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
-    -webkit-text-stroke: #ffffff38;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke: #ffffff2b;
+    -webkit-text-stroke-width: 0.5px;
 }
 
 .custom-process-title {
@@ -1149,7 +1174,8 @@ body {
 }
 
 .custom-process-subtitle {
-    font-size: 1.2rem;
+    font-family: 'Inter';
+    font-size: 1rem;
     margin-bottom: 40px;
     position: relative;
     z-index: 2;
@@ -1199,7 +1225,7 @@ body {
 /* Yellow Step Label Box */
 .custom-step-label {
     background-color: #ffcc00;
-    color: #ffffff;
+    color: #000000;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 8px 20px;
@@ -1219,8 +1245,8 @@ body {
 }
 
 .custom-box-content p {
-    font-family: inter;
-    font-size: 0.95rem;
+    font-family: 'Inter';
+    font-size: 1rem;
     font-weight: normal;
     line-height: 1.4;
 }
@@ -1340,6 +1366,7 @@ body {
 
 /* Hollow Text */
 .unique-hollow-text {
+    font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
     color: rgb(255 255 255 / 0%);
@@ -1362,7 +1389,8 @@ body {
 }
 
 .unique-housing-subtitle {
-    font-size: 1.2rem;
+    font-family: 'Inter';
+    font-size: 1rem;
     position: relative;
     z-index: 2;
     margin-bottom: 40px;
@@ -1424,6 +1452,7 @@ body {
 }
 
 .unique-housing-caption {
+    font-family: 'Inter';
     margin-top: 10px;
     font-size: 1.2rem;
     color: #ffffff;
@@ -1503,15 +1532,16 @@ body {
 }
 
 .about-hollow-text {
+    font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
     color: rgb(255 255 255 / 0%);
     position: absolute;
-    top: -73px;
+    top: -54px;
     left: 15px;
     transform: translateX(-5%);
     z-index: 1;
-    -webkit-text-stroke: 1px #ffffff38;
+    -webkit-text-stroke: 0.5px #ffffff2b;
 }
 
 .about-title {
@@ -1522,6 +1552,7 @@ body {
 }
 
 .about-subtitle {
+    font-family: 'Inter';
     font-size: 1rem;
     margin-top: 10px;
     width: 150%;
@@ -1593,6 +1624,7 @@ body {
 }
 
 .about-bullet-points li {
+    font-family: 'Inter';
     font-size: 1.3rem;
     font-weight: bold;
     position: relative;
@@ -1602,7 +1634,7 @@ body {
 
 .about-bullet-points li::before {
     content: '•';
-    color: #ffcc00;
+    color: #ffffff;
     font-size: 1.5rem;
     position: absolute;
     left: 0;
@@ -1720,6 +1752,7 @@ body {
     position: relative;
     z-index: 2;
     margin-bottom: 20px;
+    margin-top: 20px;
     top: -80px;
     left: 0.5%;
 }
@@ -1901,13 +1934,14 @@ body {
 }
 
 .feedback-hollow-text {
+    font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.05);
+    color: rgb(255 255 255 / 0%);
     position: absolute;
-    top: -42px;
+    top: -48px;
     /* left: 15%; */
-    -webkit-text-stroke: 1px #ffffff24;
+    -webkit-text-stroke: 0.5px #ffffff2b;
 }
 
 .feedback-left {
@@ -1923,11 +1957,15 @@ body {
 }
 
 .feedback-title {
+    font-family: 'Inter';
+    font-weight: bold;
     font-size: 2rem;
     margin: 10px 0;
+    width: 70%;
 }
 
 .feedback-description {
+    font-family: 'Inter';
     font-size: 1rem;
     margin-bottom: 20px;
 }
@@ -2168,6 +2206,8 @@ body {
 }
 
 .footer-links ul, .footer-blog ul, .footer-contact ul {
+    font-family: 'Inter';
+    font-size: 1rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -2601,7 +2641,7 @@ body {
     }
 
     .conclusion-text {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 30px;
     }
 
@@ -2884,18 +2924,22 @@ body {
 
 
 
+
+
+
 /* Inheritance Section Wrapper */
 .inheritance-custom-section {
     padding: 40px 20px;
     background-color: #f8f8f8;
     display: flex;
     justify-content: center;
+    padding-bottom: 0px;
 }
 
 .inheritance-custom-container {
-    max-width: 1200px; /* Limit the maximum width */
+    max-width: 1200px;
     width: 100%;
-    margin: 0 auto; /* Center the content */
+    margin: 0 auto;
 }
 
 /* Common Styles for Text and Images */
@@ -2918,10 +2962,10 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.inheritance-custom-process, 
-.inheritance-custom-legal-steps, 
-.inheritance-custom-property-value, 
-.inheritance-custom-taxes, 
+.inheritance-custom-process,
+.inheritance-custom-legal-steps,
+.inheritance-custom-property-value,
+.inheritance-custom-taxes,
 .inheritance-custom-selling {
     display: flex;
     justify-content: space-between;
@@ -2929,6 +2973,7 @@ body {
     margin-bottom: 40px;
 }
 
+/* Reversing alternate sections */
 .inheritance-custom-process:nth-child(odd),
 .inheritance-custom-legal-steps:nth-child(even),
 .inheritance-custom-property-value:nth-child(odd),
@@ -2937,14 +2982,18 @@ body {
     flex-direction: row-reverse;
 }
 
-.inheritance-title, .inheritance-heading, .inheritance-paragraph {
+.inheritance-title,
+.inheritance-heading,
+.inheritance-paragraph {
     color: #000;
 }
 
 .inheritance-title {
     font-size: 2.5rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    color: #ffcc00;
 }
 
 .inheritance-heading {
@@ -2966,23 +3015,132 @@ body {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Adjustments */
+
+/* Section with white background */
+.value-section {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Overlay Box */
+.image-overlay-box {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+}
+
+.center-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.image-overlay-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 27px;
+    z-index: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    padding: 20px;
+    z-index: 2;
+    width: 90%;
+}
+
+.text-overlay h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.text-overlay p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .inheritance-custom-process, 
-    .inheritance-custom-legal-steps, 
-    .inheritance-custom-property-value, 
-    .inheritance-custom-taxes, 
+    .text-overlay {
+        padding: 10px;
+    }
+
+    .text-overlay h2 {
+        font-size: 1.3rem;
+    }
+
+    .text-overlay p {
+        font-size: 0.85rem;
+    }
+
+    .center-image {
+        width: 100%;
+        height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .text-overlay h2 {
+        font-size: 1.1rem;
+    }
+
+    .text-overlay p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* Responsive Design for sections (fix for mobile) */
+@media (max-width: 768px) {
+    .inheritance-custom-process,
+    .inheritance-custom-legal-steps,
+    .inheritance-custom-property-value,
+    .inheritance-custom-taxes,
     .inheritance-custom-selling {
-        flex-direction: column;
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center;
     }
 
     .inheritance-custom-text {
         width: 100%;
+        padding: 15px;
+        text-align: left;
     }
 
     .inheritance-custom-image {
         width: 100%;
         margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .inheritance-custom-image img {
+        width: 100%; /* Ensures image takes full width */
+        height: auto; /* Maintains aspect ratio */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .inheritance-heading {
@@ -2991,12 +3149,15 @@ body {
 
     .inheritance-paragraph {
         font-size: 1rem;
+        line-height: 1.5;
     }
 }
 
+/* Specific adjustments for very small screens - 480px and below */
 @media (max-width: 480px) {
     .inheritance-title {
         font-size: 1.8rem;
+        text-align: center;
     }
 
     .inheritance-heading {
@@ -3009,9 +3170,416 @@ body {
 
     .inheritance-custom-text {
         padding: 15px;
+        text-align: left;
     }
 
     .inheritance-custom-image img {
+        width: 100%; /* Makes sure the image fits perfectly in small screens */
+        height: auto;
         border-radius: 5px;
+    }
+}
+
+
+
+
+
+
+
+/* Section 1: Facing Financial Challenges */
+.financial-section {
+    background-color: #f8f8f8;
+
+}
+
+.financial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.financial-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.financial-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.financial-paragraph {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Section 2: Cash Offers */
+.cash-offers-section {
+    background-color: #f8f8f8;
+}
+
+.cash-offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cash-offers-image {
+    width: 45%;
+}
+
+.cash-offers-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cash-offers-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.cash-offers-title {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.cash-offers-paragraph {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section 3: Auction Section */
+.auction-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+}
+
+.auction-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.auction-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.auction-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.auction-paragraph {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.auction-image {
+    width: 45%;
+}
+
+.auction-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Section 4: Finding a Realtor */
+.realtor-section {
+    background-color: #000000;
+    padding: 60px 20px;
+}
+
+.realtor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.realtor-image {
+    width: 45%;
+}
+
+.realtor-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.realtor-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.realtor-title {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.realtor-paragraph {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Section 5: Selling the Home Yourself (FSBO) */
+.fsbo-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+}
+
+.fsbo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fsbo-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.fsbo-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.fsbo-paragraph {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.fsbo-image {
+    width: 45%;
+}
+
+.fsbo-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Section 6: Setting the Right Price */
+.pricing-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.pricing-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.pricing-paragraph {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.pricing-image {
+    width: 45%;
+}
+
+.pricing-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Form Section */
+.financial-page-form-section {
+    background-color: #ffcc00;
+    padding: 60px 20px;
+}
+
+.financial-page-form-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px;
+    border-radius: 20px;
+}
+
+.financial-page-form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.financial-page-form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.financial-page-form-left {
+    width: 50%;
+    color: white;
+    padding: 20px;
+}
+
+.financial-page-form-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.financial-page-form-left p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.financial-page-form-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.financial-page-form-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.financial-page-form-right {
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.financial-page-form-right h3 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.financial-page-form-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.financial-page-form-right input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.financial-page-form-btn-submit {
+    background-color: #ffcc00;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.financial-page-form-btn-submit:hover {
+    background-color: #e6b800;
+}
+
+/* Responsive Design */
+
+/* For smaller screens - 768px and below */
+@media (max-width: 768px) {
+    .financial-page-form-row {
+        flex-direction: column;
+    }
+
+    .financial-page-form-left,
+    .financial-page-form-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cash-offers-container,
+    .auction-container,
+    .realtor-container,
+    .fsbo-container,
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .cash-offers-content,
+    .auction-content,
+    .realtor-content,
+    .fsbo-content,
+    .pricing-content {
+        width: 100%;
+    }
+
+    .cash-offers-image,
+    .auction-image,
+    .realtor-image,
+    .fsbo-image,
+    .pricing-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile-specific styling - 480px and below */
+@media (max-width: 480px) {
+    .financial-title,
+    .cash-offers-title,
+    .auction-title,
+    .realtor-title,
+    .fsbo-title,
+    .pricing-title {
+        font-size: 1.8rem;
+    }
+
+    .financial-paragraph,
+    .cash-offers-paragraph,
+    .auction-paragraph,
+    .realtor-paragraph,
+    .fsbo-paragraph,
+    .pricing-paragraph {
+        font-size: 1rem;
+    }
+
+    .financial-page-form-left h2 {
+        font-size: 2rem;
+    }
+
+    .financial-page-form-right h3 {
+        font-size: 1.5rem;
+    }
+
+    .financial-page-form-right input {
+        font-size: 0.9rem;
+    }
+
+    .financial-page-form-btn-submit {
+        font-size: 0.9rem;
+        padding: 10px 15px;
     }
 }
