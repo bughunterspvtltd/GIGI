@@ -3785,6 +3785,15 @@ body {
     margin: 0 auto;
     /* padding: 20px; */
 }
+
+.condos-hero-section-title{
+    text-align: center;
+    font-family: 'Outfit';
+    color: #ffcc00;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 .what-is-condo-section-title {
     text-align: center;
     font-size: 2rem;
@@ -3833,7 +3842,7 @@ body {
     height: 50px;
     margin-bottom: 10px;
 }
-.step-number {
+.condos-step-number {
     background: #ffcc00;
     color: #000;
     border-radius: 50%;
@@ -3898,6 +3907,7 @@ body {
 
 .appeal-box p {
     font-family: 'Inter';
+    text-align: justify;
 }
 
 
