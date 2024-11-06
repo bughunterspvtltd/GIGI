@@ -52,6 +52,9 @@ indicators.forEach((indicator, index) => {
     });
 });
 
+
+
+
 // Carousel Controls
 document.querySelector('.carousel-control.prev').addEventListener('click', () => {
     showSlide(currentIndex - 1);

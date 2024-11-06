@@ -30,7 +30,6 @@ body {
     background-color: #ffcc00;
     border: none;
     color: #000;
-    /* width: 125px; */
     font-weight: bold;
 }
 .logo{
@@ -44,11 +43,12 @@ body {
 }
 
 
-/* .row{
-    margin-left: 10%;
-    align-items: center;
-} */
-
+@media (max-width: 480px) {
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+    background-color: black;
+    padding-bottom: 15px;
+}
+}
 
 
 
@@ -319,7 +319,7 @@ body {
 
     .center-hero-image {
         max-width: 100%;
-        height: 720px;
+        height: 770px;
         max-height: none;
         object-fit: cover;
         border-radius: 30px;
@@ -377,7 +377,7 @@ body {
 
     .scroll-to-bottom a {
         font-size: 1.5rem;
-        margin-right: -13px;
+        margin-right: -7px;
     }
 
     .social-media {
@@ -3582,5 +3582,390 @@ body {
     .financial-page-form-btn-submit {
         font-size: 0.9rem;
         padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+/* General Styles */
+.apartment-container {
+   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.apartment-intro-box, .apartment-process-box, .apartment-qualifications-box, .apartment-evolution-box, 
+.apartment-types-box, .apartment-modern-box, .apartment-options-box, .apartment-why-choose-box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apartment-title {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    text-align: center;
+}
+
+.apartment-subheading {
+    font-weight: bold;
+    font-family: 'Outfit';
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: center;
+}
+
+.apartment-paragraph {
+    font-family: 'Inter';
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Tiles Container for Types and Options Sections */
+.apartment-tiles-container, .apartment-options-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.apartment-tile, .apartment-option {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    transition: transform .2s; /* Animation */
+}
+
+.apartment-option:hover{
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+.apartment-tile:hover{
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+
+.apartment-tile h3, .apartment-option h3 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.apartment-tile p, .apartment-option p {
+    text-align: justify;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Button */
+.apartment-contact-btn {
+    position: relative;
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.apartment-contact-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .apartment-tiles-container, .apartment-options-container {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Modal Custom Styling */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 100%;
+    /* height: 532px; */
+    margin: auto;
+    margin-top: 70px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.btn-warning {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-primary{
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #e6b800;
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+        margin-top: 100px;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    .btn-close{
+    margin-top: -80px;
+    }
+}
+
+
+
+
+
+/* Sell Your Condo Page Content */
+.content-wrapper {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+.what-is-condo-section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Process Section */
+.process-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+}
+.steps-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.step-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: justify;
+    transition: transform .2s; /* Animation */
+}
+
+.step-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.step-box h3 {
+    text-align: center;
+}
+
+.step-box p {
+    font-family: 'Inter';
+}
+
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.step-number {
+    background: #ffcc00;
+    color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: bold;
+}
+
+/* What is a Condo Section */
+.what-is-condo-section {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.what-is-condo-section p {
+    font-family: 'Inter';
+}
+
+.condo-info {
+    width: 60%;
+}
+.condo-image {
+    width: 40%;
+    border-radius: 10px;
+}
+
+/* Appeal Section */
+.appeal-section {
+    background: #000000;
+    color: #fff;
+    padding: 40px 20px;
+}
+.appeal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.appeal-box {
+    background: #444;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform .2s; /* Animation */
+}
+
+.appeal-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appeal-box h3 {
+    color: #ffcc00;
+}
+
+.appeal-box p {
+    font-family: 'Inter';
+}
+
+
+
+/* Challenges Section */
+.challenges-section {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Factors Section */
+.factors-section {
+    padding: 40px 20px;
+    background: #111;
+    color: #fff;
+}
+.factors-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Why Choose Section */
+.why-choose-condos-section {
+    background: #ffcc00;
+    padding: 40px 20px;
+}
+.condos-section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.benefits-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.benefit-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .what-is-condo-section,
+    .process-section .steps-container,
+    .why-choose-section .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .appeal-container, .steps-container, .benefits-container {
+        gap: 10px;
+    }
+    .step-box, .appeal-box, .benefit-box {
+        width: 100%;
     }
 }
