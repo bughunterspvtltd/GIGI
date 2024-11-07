@@ -131,7 +131,10 @@
             <div class="form-container">
                 <h2>Get Your Free Cash Offer</h2>
                 <p>No commitments, just a free estimate</p>
-                <form id="cashOfferForm">
+                <!-- <form id="cashOfferForm"> -->
+
+                <form id="cashOfferForm" onsubmit="sendEmail(); reset(); return false;">
+                
                     <input type="text" class="form-control" id="address" placeholder="Address" required>
                     <input type="text" class="form-control" id="name" placeholder="Name" required>
                     <input type="number" class="form-control" id="phone" placeholder="Phone" required>
@@ -143,8 +146,6 @@
                     <button type="submit" class="btn btn-warning w-100">Submit</button>
                 </form>
             </div>
-
-
         </div>
     </div>
 
@@ -155,6 +156,8 @@
     </div>
 </header>
 </section>
+
+
 
 
 
@@ -190,70 +193,74 @@
 
 <!-- Properties Section -->
 <section class="properties-section">
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Left Static Content (50%) -->
-            <div class="col-lg-6 col-md-12 left-section">
-                <h1 class="featured-title">Featured</h1>
-                <h2>Explore Our Premier Properties</h2>
-                <span class="hollow-properties-text">PROPERTIES</span>
-                <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
-                <a href="#" class="btn btn-warning learn-more-btn">Learn More →</a>
-            </div>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <!-- Left Static Content (50%) -->
+                <div class="col-lg-5 col-md-12 left-section">
+                    <span class="hollow-properties-text">PROPERTIES</span>
+                    <h1 class="featured-title">Featured</h1>
+                    <h2>Explore Our Premier Properties</h2>
+                    
+                    <p>Discover the homes and properties we've helped sell quickly and efficiently.</p>
+                    <a href="#" class="learn-more-btn">Learn More →</a>
+                </div>
 
-            <!-- Right Carousel (50%) -->
-            <div class="col-lg-6 col-md-12">
-                <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                    <div class="carousel-inner">
-                        <!-- First Slide -->
-                        <div class="carousel-item active">
-                            <div class="carousel-image-wrapper">
-                                <img src="assests/Explore Property 1.svg" class="d-block w-100" alt="Townhouses">
-                                <div class="overlay"></div>
-                                <p class="carousel-text">Townhouses</p>
-                                <a href="townhouses.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                <!-- Right Carousel (50%) -->
+                <div class="col-lg-5 col-md-12">
+                    <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- First Slide -->
+                            <div class="carousel-item active">
+                                <div class="carousel-image-wrapper">
+                                    <img src="assests/Explore Property 1.svg" class="d-block w-100" alt="Townhouses">
+                                    <div class="overlay"></div>
+                                    <p class="carousel-text">Townhouses</p>
+                                    <a href="townhouses.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                                </div>
+                            </div>
+                            <!-- Second Slide -->
+                            <div class="carousel-item">
+                                <div class="carousel-image-wrapper">
+                                    <img src="assests/Explore Property 2.svg" class="d-block w-100" alt="Luxury Villa">
+                                    <div class="overlay"></div>
+                                    <p class="carousel-text">Luxury Villa</p>
+                                    <a href="luxury-villa.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                                </div>
+                            </div>
+                            <!-- Third Slide -->
+                            <div class="carousel-item">
+                                <div class="carousel-image-wrapper">
+                                    <img src="assests/About Us 1.svg" class="d-block w-100" alt="Modern Home">
+                                    <div class="overlay"></div>
+                                    <p class="carousel-text">Modern Home</p>
+                                    <a href="modern-home.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
+                                </div>
+                            </div>
+                            <!-- Fourth Slide -->
+                            <div class="carousel-item">
+                                <div class="carousel-image-wrapper">
+                                    <img src="assests/About Us 2.svg" class="d-block w-100" alt="Vintage Estate">
+                                    <div class="overlay"></div>
+                                    <p class="carousel-text">Vintage Estate</p>
+                                    <a href="vintage-estate.html" class="carousel-btn"><img src="assests/White Arrow.svg" alt="Arrow"></a>
+                                </div>
                             </div>
                         </div>
-                        <!-- Second Slide -->
-                        <div class="carousel-item">
-                            <div class="carousel-image-wrapper">
-                                <img src="assests/Explore Property 2.svg" class="d-block w-100" alt="Luxury Villa">
-                                <div class="overlay"></div>
-                                <p class="carousel-text">Luxury Villa</p>
-                                <a href="luxury-villa.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                            </div>
+                        <!-- Carousel Indicators (Line) -->
+                        <div class="carousel-line-indicators">
+                            <span data-bs-target="#propertyCarousel" data-bs-slide-to="0" class="active"></span>
+                            <span data-bs-target="#propertyCarousel" data-bs-slide-to="1"></span>
+                            <span data-bs-target="#propertyCarousel" data-bs-slide-to="2"></span>
+                            <span data-bs-target="#propertyCarousel" data-bs-slide-to="3"></span>
                         </div>
-                        <!-- Third Slide -->
-                        <div class="carousel-item">
-                            <div class="carousel-image-wrapper">
-                                <img src="assests/About Us 1.svg" class="d-block w-100" alt="Modern Home">
-                                <div class="overlay"></div>
-                                <p class="carousel-text">Modern Home</p>
-                                <a href="modern-home.html" class="carousel-btn"><span class="carousel-arrow">→</span></a>
-                            </div>
-                        </div>
-                        <!-- Fourth Slide -->
-                        <div class="carousel-item">
-                            <div class="carousel-image-wrapper">
-                                <img src="assests/About Us 2.svg" class="d-block w-100" alt="Vintage Estate">
-                                <div class="overlay"></div>
-                                <p class="carousel-text">Vintage Estate</p>
-                                <a href="vintage-estate.html" class="carousel-btn"><img src="assests/White Arrow.svg" alt="Arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Carousel Indicators (Line) -->
-                    <div class="carousel-line-indicators">
-                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="0" class="active"></span>
-                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="1"></span>
-                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="2"></span>
-                        <span data-bs-target="#propertyCarousel" data-bs-slide-to="3"></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
     
     
@@ -750,6 +757,7 @@
                 <img src="assests/instagram.svg" alt="Instagram" id="Instagram">
                 <img src="assests/youtube.svg" alt="Youtube" id="Youtube">
             </div>
+            
         </div>
         
         <!-- Quick Links -->
@@ -830,7 +838,7 @@
                         <div class="col-md-12">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
-                                <label class="form-check-label" for="privacyPolicy">
+                                <label class="modal-form-check-label" for="privacyPolicy">
                                     I have read and accepted the Terms & Conditions and Privacy Statement.
                                 </label>
                             </div>
@@ -849,49 +857,65 @@
 
 
 
+<!-- SMTP JS -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+function sendEmail() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let body = "Name: " + name + "<br> Email: " + email + "<br> Phone: " + phone + "<br> Address: " + address;
+    console.log(body);
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "ahujamanish60@gmail.com",
+        Password : "ED63737F0FA41F2FFBDA62C0030402884A49",
+        To: 'ahujamanish60@gmail.com',
+        From: "ahujamanish60@gmail.com",
+        Subject: "Email us with any questions",
+        Body: body,
+    }).then(
+        message => alert("Message sent successfully")
+    );
+}
 
 
 
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-                // Wait until the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', function () {
 
-        // Select the form element
-        const form = document.getElementById('cashOfferForm');
 
-        // Add event listener for form submission
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent form from submitting normally
 
-            // Get form values
-            const address = document.getElementById('address').value.trim();
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const termsAccepted = document.getElementById('terms').checked;
 
-            // Basic validation
-            if (!address || !name || !phone || !email || !termsAccepted) {
-                alert("Please fill in all fields and accept the terms.");
-                return;
-            }
 
-            // Send email using SMTP.js
-            Email.send({
-                SecureToken: "ab37c0a3-817c-4c0e-8e05-33da81730e0b", // Replace with your SMTP.js secure token
-                To: "testwithbughunters@gmail.com", // Where you want the email to be sent
-                From: "testwithbughunters@gmail.com", // Your email
-                Subject: "New Cash Offer Request",
-                Body: "And this is the body"
-            }).then(
-                message => alert("Form submitted successfully!"),
-                error => alert("Error submitting form: " + error)
-            );
-        });
-        });
 
-    </script>
+
+
+    // function sendEmail() {
+    //     let name = document.getElementById("name").value;
+    //     let email = document.getElementById("email").value;
+    //     let phone = document.getElementById("phone").value;
+    //     let address = document.getElementById("address").value;
+    //     let body = "Name: " + name + "<br> Email: " + email + "<br> Phone: " + phone + "<br> Address: " + address;
+    //     console.log(body);
+
+
+    //     Email.send({
+    //         Host : "smtp.elasticemail.com",
+    //         Username : "testwithbughunters2@gmail.com",
+    //         Password : "1962B0E55E086B9C9592CCBE1621CBFBFCFC",
+    //         To: 'testwithbughunters@gmail.com',  
+    //         From: "testwithbughunters@gmail.com",
+    //         Subject: "Email us with any questions",
+    //         Body: body,
+    //     }).then(
+    //         message => alert("message sent Successfully")
+    //     );
+    // }
+</script>
+
+
 
 
 
