@@ -43,8 +43,8 @@
 <body>
 
 
-  <!-- Fixed Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+   <!-- Fixed Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img src="assests/GIGI Logo.svg" alt="GIGI Buys Homes" href="index.html" class="logo">
@@ -81,13 +81,14 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li> -->
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactFormModal" style="cursor: pointer;">Contact Us</a></li>
             </ul>
-            <a href="#" class="btn btn-warning ms-3">Sell Now</a>
+            <!-- <a href="#" class="btn btn-warning ms-3">Sell Now</a> -->
+            <a button type="button" class="btn btn-warning ms-3" data-bs-toggle="modal" data-bs-target="#contactFormModal">Sell Now</a>
         </div>
     </div>
 </nav>
-
 
 
 <section>
@@ -124,7 +125,10 @@
             <div class="form-container">
                 <h2>Get Your Free Cash Offer</h2>
                 <p>No commitments, just a free estimate</p>
-                <form id="cashOfferForm">
+                <!-- <form id="cashOfferForm"> -->
+
+                <form id="cashOfferForm" onsubmit="sendEmail(); reset(); return false;">
+                
                     <input type="text" class="form-control" id="address" placeholder="Address" required>
                     <input type="text" class="form-control" id="name" placeholder="Name" required>
                     <input type="number" class="form-control" id="phone" placeholder="Phone" required>
@@ -269,37 +273,38 @@ Today’s apartment buildings range from low-rise suburban buildings to high-ris
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="contactForm">
+                <!-- Form with onsubmit to trigger sendEmail -->
+                <form id="contactForm" onsubmit="sendEmail(); return false;">
                     <div class="row g-3">
                         <!-- Address -->
                         <div class="col-md-12">
                             <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="Your Address" required>
+                            <input type="text" class="form-control" id="user_address" placeholder="Address" required>
                         </div>
 
                         <!-- Name -->
                         <div class="col-md-6">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            <input type="text" class="form-control" id="user_name" placeholder="Your Name" required>
                         </div>
 
                         <!-- Phone -->
                         <div class="col-md-6">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number" required>
+                            <input type="number" class="form-control" id="user_phone" placeholder="Your Phone Number" required>
                         </div>
 
                         <!-- Email -->
                         <div class="col-md-12">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                            <input type="email" class="form-control" id="user_email" placeholder="you@example.com" required>
                         </div>
 
                         <!-- Checkbox for Privacy Policy -->
                         <div class="col-md-12">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
-                                <label class="form-check-label" for="privacyPolicy">
+                                <label class="modal-form-check-label" for="privacyPolicy">
                                     I have read and accepted the Terms & Conditions and Privacy Statement.
                                 </label>
                             </div>
@@ -315,6 +320,19 @@ Today’s apartment buildings range from low-rise suburban buildings to high-ris
         </div>
     </div>
 </div>
+
+
+
+
+<!-- Load EmailJS Library in HTML -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Initialize EmailJS with your User ID (No need to repeat this in script.js) -->
+<script type="text/javascript">
+  (function(){
+      emailjs.init("LlE1vZBdg1gZWj3Sp"); // Initialize with your EmailJS user ID
+  })();
+</script>
 
 
 
@@ -379,6 +397,13 @@ Today’s apartment buildings range from low-rise suburban buildings to high-ris
         <p>&copy; 2023 All rights reserved</p>
     </div>
 </footer>
+
+
+
+
+
+
+
 
 
 

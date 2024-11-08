@@ -66,7 +66,7 @@ document.querySelector('.carousel-control.next').addEventListener('click', () =>
 // Auto-slide every 5 seconds
 setInterval(() => {
     showSlide(currentIndex + 1);
-}, 5000);
+}, 2000);
 
 
 
@@ -123,8 +123,65 @@ function closeVideo() {
 
 
 
+// HERO FORM //
+// Function to send email using EmailJS
+function sendEmail() {
+    let params = {
+        address: document.getElementById("address").value,
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+    };
+
+    emailjs.send("service_al5v0rr", "template_3vn1tt6", params)
+    .then(response => {
+        alert("Message sent successfully");
+        
+        // Optionally, reset the form fields after submission
+        document.getElementById("contactForm").reset();
+    }, error => {
+        alert("Failed: " + JSON.stringify(error));
+    });
+}
+
+// Attach sendEmail to form submit event
+document.getElementById("contactForm").onsubmit = function(event) {
+    event.preventDefault(); // Prevent default form submission
+    sendEmail(); // Call the sendEmail function
+};
 
 
+
+
+
+// MODAL FORM //
+// Function to send email using EmailJS
+function sendEmailModal() {
+    let params = {
+        user_address: document.getElementById("user_address").value,
+        user_name: document.getElementById("user_name").value,
+        user_phone: document.getElementById("user_phone").value,
+        user_email: document.getElementById("user_email").value,
+    };
+
+    console.log("Form Data:", params); // Log form data to ensure accuracy
+
+    emailjs.send("service_al5v0rr", "template_2uhxa2f", params)
+    .then(response => {
+        alert("Message sent successfully");
+        
+        // Reset the form
+        document.getElementById("contactForm").reset();
+    }, error => {
+        alert("Failed: " + JSON.stringify(error));
+    });
+}
+
+// Attach sendEmail to form submit event if it's not inline in HTML
+document.getElementById("contactForm").onsubmit = function(event) {
+    event.preventDefault(); // Prevent default form submission
+    sendEmail();
+};
 
 
 

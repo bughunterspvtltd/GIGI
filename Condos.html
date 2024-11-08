@@ -24,7 +24,7 @@
 
 
 
-      <!--Start of Tawk.to Script-->
+    <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -43,8 +43,7 @@
 <body>
 
 
-
-    <!-- Fixed Navbar -->
+   <!-- Fixed Navbar -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -82,9 +81,11 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li> -->
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactFormModal" style="cursor: pointer;">Contact Us</a></li>
             </ul>
-            <a href="#" class="btn btn-warning ms-3">Sell Now</a>
+            <!-- <a href="#" class="btn btn-warning ms-3">Sell Now</a> -->
+            <a button type="button" class="btn btn-warning ms-3" data-bs-toggle="modal" data-bs-target="#contactFormModal">Sell Now</a>
         </div>
     </div>
 </nav>
@@ -113,7 +114,7 @@
                     <img src="assests/Curved Arrow.svg" alt="Curved Arrow" class="arrow-svg">
                 </div> -->
 
-                <p>At GIGI Buys Homes, we understand the unique challenges that come with selling a condo, and we're dedicated to making the process as smooth and stress-free as possible. Whether you need to sell quickly due to a change in circumstances or want to bypass the complexities of the traditional market, you can count on us to provide a fast, fair, and simple solution.
+                <p>At GIGI Buys Homes, we simplify condo selling. Whether you're facing a time-sensitive situation or want to avoid the hassle of traditional selling, we're here to offer a fast, fair, and stress-free solution.
                 </p>
 
                 <!-- <div class="gigi-bg">
@@ -125,7 +126,10 @@
             <div class="form-container">
                 <h2>Get Your Free Cash Offer</h2>
                 <p>No commitments, just a free estimate</p>
-                <form id="cashOfferForm">
+                <!-- <form id="cashOfferForm"> -->
+
+                <form id="cashOfferForm" onsubmit="sendEmail(); reset(); return false;">
+                
                     <input type="text" class="form-control" id="address" placeholder="Address" required>
                     <input type="text" class="form-control" id="name" placeholder="Name" required>
                     <input type="number" class="form-control" id="phone" placeholder="Phone" required>
@@ -148,25 +152,30 @@
 
 
 
-<!-- Sell Your Condo Page Content -->
-<div class="condos-content-wrapper">
-    <section class="process-section">
-        <h2 class="condos-hero-section-title">Our Streamlined Process for Selling Your Condo</h2>
-        <div class="steps-container">
+<!-- Condo Sale Page Main Wrapper -->
+<div class="condo-sale-page-wrapper">
+
+    <!-- Intro Section -->
+    <section class="condo-intro-section">
+        <h1 class="intro-title">Sell Your Condo Fast with GIGI Buys Homes</h1>
+        <p class="intro-text">If you're considering selling your condo, GIGI Buys Homes offers a fast, simple, and hassle-free solution. With us, you can avoid the complications of traditional selling, benefit from a transparent process, and enjoy the ease of a cash sale. Here’s how we make it easy for you.</p>
+    </section>
+
+    <!-- Process Section -->
+    <section class="condo-process-section">
+        <h2 class="section-title">Our Streamlined Process for Selling Your Condo</h2>
+        <div class="process-steps">
             <div class="step-box">
-                <!-- <img src="path/to/step1-icon.png" alt="Step 1 Icon" class="step-icon"> -->
                 <div class="condos-step-number">1</div>
                 <h3>Initial Contact and Evaluation</h3>
                 <p>Start by filling out our easy online form or giving us a call. One of our friendly team members will reach out to learn more about your condo and your goals for the sale. We’re here to listen, answer any questions, and get an understanding of what you’re hoping to achieve.</p>
             </div>
             <div class="step-box">
-                <!-- <img src="path/to/step2-icon.png" alt="Step 2 Icon" class="step-icon"> -->
                 <div class="condos-step-number">2</div>
                 <h3>In-Person Walkthrough</h3>
                 <p>We’ll schedule a walkthrough of your condo within 24 hours of initial contact—no need to clean up or make repairs. We buy condos as-is, so you don’t have to worry about preparing it for sale.</p>
             </div>
             <div class="step-box">
-                <!-- <img src="path/to/step3-icon.png" alt="Step 3 Icon" class="step-icon"> -->
                 <div class="condos-step-number">3</div>
                 <h3>Receive a No-Obligation Offer</h3>
                 <p>After our walkthrough, we’ll present a fair, no-obligation cash offer based on a careful analysis of the market and the details of your condo. You can review it with complete confidence, knowing it’s a straightforward, honest offer without hidden fees.</p>
@@ -174,87 +183,128 @@
         </div>
     </section>
 
-    <section class="what-is-condo-section">
-        <h2 class="what-is-condo-section-title">What is a Condo?</h2>
-        <div class="condo-info">
-            <p>A condominium, or condo, is a type of real estate where individual units are privately owned, but shared spaces—like hallways, pools, and recreation areas—are collectively owned by all the condo owners within the complex. Condos offer a unique combination of homeownership and community living, providing residents with the privacy of owning their unit while enjoying amenities without the hassle of maintaining them.</p>
+    <!-- What is a Condo Section -->
+    <section class="condo-info-section">
+        <h2 class="section-title">What is a Condo?</h2>
+        <div class="info-content">
+            <p>A condominium, or condo, is a type of real estate where individual units are privately owned, but shared spaces—like hallways, pools, and recreation areas—are collectively owned by all the condo owners within the complex.</p>
             <img src="YT Thumbnail.svg" alt="Condo Living" class="condo-image">
         </div>
     </section>
 
-    <section class="appeal-section">
-        <h2 class="condos-section-title">The Appeal and Flexibility of Condos</h2>
-        <div class="appeal-container">
-            <div class="appeal-box">
-                <img src="assests/Sell As Is.svg" alt="Homebuyer Icon" style="width: auto; height: 40px; margin-bottom: 5px;">
+    <!-- Appeal Section -->
+    <section class="condo-appeal-section">
+        <h2 class="section-title">The Appeal and Flexibility of Condos</h2>
+        <div class="appeal-cards">
+            <div class="appeal-card">
                 <h3>First-Time Homebuyers</h3>
                 <p>Condos can be a more affordable entry into homeownership, especially in urban areas where single-family homes may be financially out of reach.</p>
             </div>
-            <div class="appeal-box">
-                <img src="assests/Sell As Is.svg" alt="Retirees Icon" style="width: auto; height: 40px; margin-bottom: 5px;">
+            <div class="appeal-card">
                 <h3>Retirees</h3>
                 <p>Many retirees choose condos for their convenience. HOA fees cover maintenance and upkeep, allowing retirees to enjoy a low-maintenance lifestyle.</p>
             </div>
-            <div class="appeal-box">
-                <img src="assests/Sell As Is.svg" alt="Professionals Icon" style="width: auto; height: 40px; margin-bottom: 5px;">
+            <div class="appeal-card">
                 <h3>Young Professionals</h3>
                 <p>For young professionals, condos in urban areas offer the convenience of being close to work, entertainment, and dining options.</p>
             </div>
-            <div class="appeal-box">
-                <img src="assests/Sell As Is.svg" alt="Investors Icon" style="width: auto; height: 40px; margin-bottom: 5px;">
+            <div class="appeal-card">
                 <h3>Real Estate Investors</h3>
                 <p>Condos present a solid investment opportunity with reliable rental income potential.</p>
             </div>
         </div>
     </section>
 
-    <section class="challenges-section">
-        <h2 class="section-title">Challenges of Selling a Condo</h2>
-        <p class="section-description">Selling a condo comes with some unique challenges due to the involvement of homeowners’ associations (HOAs). HOAs may have specific rules and fees that could impact the sale of your property...</p>
-    </section>
-
-    <section class="factors-section">
-        <h2 class="section-title">Factors That Influence Condo Value</h2>
-        <ul class="factors-list">
-            <li><strong>Location:</strong> Like all real estate, location is a crucial factor in determining a condo’s value.</li>
-            <li><strong>Size and Layout:</strong> The square footage of your condo and its layout influence its marketability.</li>
-            <li><strong>Condition of the Property:</strong> Although GIGI Buys Homes buys condos as-is, the property’s condition still plays a role in determining our offer.</li>
-            <li><strong>HOA Fees and Rules:</strong> High HOA fees can deter buyers by adding to the cost of ownership.</li>
-            <li><strong>Market Trends:</strong> Real estate market conditions impact condo prices.</li>
-        </ul>
-    </section>
-
-    <section class="why-choose-condos-section">
-        <h2 class="condos-section-title">Why Choose GIGI Buys Homes for Your Condo Sale?</h2>
-        <div class="benefits-container">
-            <div class="benefit-box">
-                <img src="path/to/simplicity-icon.png" alt="Simplicity Icon">
-                <h3>Simple and Convenient Process</h3>
-                <p>From start to finish, our process is designed to be as easy as possible.</p>
-            </div>
-            <div class="benefit-box">
-                <img src="path/to/no-hidden-costs-icon.png" alt="No Hidden Costs Icon">
-                <h3>No Hidden Costs</h3>
-                <p>We offer a transparent, all-cash deal with no hidden fees or closing costs.</p>
-            </div>
-            <div class="benefit-box">
-                <img src="path/to/supportive-icon.png" alt="Supportive Team Icon">
-                <h3>Supportive and Professional Team</h3>
-                <p>Our team is committed to delivering excellent customer service.</p>
-            </div>
-            <div class="benefit-box">
-                <img src="path/to/flexibility-icon.png" alt="Flexibility Icon">
-                <h3>Flexibility for Your Needs</h3>
-                <p>Life can be unpredictable, and we’re ready to work with you.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>Ready to Sell Your Condo Easily?</h2>
-        <p>Contact GIGI Buys Homes today to start the process. We’re here to help you make a smooth transition and provide the support you need for a stress-free sale!</p>
+    <!-- Call to Action Section -->
+    <section class="condo-cta-section">
+        <h2 class="cta-title">Ready to Sell Your Condo Easily?</h2>
+        <p class="cta-text">Contact GIGI Buys Homes today to start the process. We’re here to help you make a smooth transition and provide the support you need for a stress-free sale!</p>
+        <a href="#" class="cta-button">Get Started Now</a>
     </section>
 </div>
+
+
+
+<!-- Modal Structure -->
+<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactFormLabel">Get Your Free Cash Offer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form with onsubmit to trigger sendEmail -->
+                <form id="contactForm" onsubmit="sendEmailModal(); return false;">
+                    <div class="row g-3">
+                        <!-- Address -->
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="user_address" placeholder="Address" required>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="user_name" placeholder="Your Name" required>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="user_phone" placeholder="Your Phone Number" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="user_email" placeholder="you@example.com" required>
+                        </div>
+
+                        <!-- Checkbox for Privacy Policy -->
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="privacyPolicy" required>
+                                <label class="modal-form-check-label" for="privacyPolicy">
+                                    I have read and accepted the Terms & Conditions and Privacy Statement.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-warning w-100">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Load EmailJS Library in HTML -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Initialize EmailJS with your User ID -->
+<script type="text/javascript">
+  (function(){
+      emailjs.init("LlE1vZBdg1gZWj3Sp"); // Initialize with your EmailJS user ID
+  })();
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
