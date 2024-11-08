@@ -128,7 +128,14 @@ window.addEventListener("resize", updateCarousel);
 updateCarousel();
 
 
+// Video Overlay Functions
+function openVideo() {
+    document.getElementById("videoOverlay").style.display = "flex";
+}
 
+function closeVideo() {
+    document.getElementById("videoOverlay").style.display = "none";
+}
 
 
 
