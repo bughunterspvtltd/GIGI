@@ -3418,7 +3418,7 @@ body {
 
 .financial-page-form-left {
     width: 50%;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 20px;
 }
 
@@ -3939,5 +3939,9 @@ section {
         width: 90%;
     }
 }
+
+
+
+
 
 

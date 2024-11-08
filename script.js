@@ -21,12 +21,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
 // Explore Properties 
 // Explore Properties Carousel
 const slides = document.querySelectorAll('.carousel-item');
@@ -55,6 +49,10 @@ indicators.forEach((indicator, index) => {
 
 
 
+
+
+
+
 // Carousel Controls
 document.querySelector('.carousel-control.prev').addEventListener('click', () => {
     showSlide(currentIndex - 1);
@@ -77,49 +75,64 @@ setInterval(() => {
 
 
 // Feedback Carousel Functionality
-// Feedback Carousel Functionality
-let currentFeedbackIndex = 0;
-const feedbackSlideContainer = document.querySelector(".carousel-slide");
+let currentIndex2 = 0;
 const feedbackCards = document.querySelectorAll(".feedback-card");
+const totalCards = feedbackCards.length;
+const carouselContainer = document.querySelector(".carousel-container");
+const slideWidth = feedbackCards[0].clientWidth + 10; // Adjust based on margin
 
-// Check if feedback cards and carousel controls exist
-if (feedbackSlideContainer && feedbackCards.length > 0) {
-    const cardHeight = feedbackCards[0].offsetHeight + 20; // Includes card margin
-    const totalFeedbackSlides = Math.ceil(feedbackCards.length / 2);
+function updateCarousel() {
+    const visibleCards = window.innerWidth < 768 ? 1 : 2; // One card on mobile, two on larger screens
+    const maxIndex = totalCards - visibleCards;
 
-    function showNextFeedback() {
-        currentFeedbackIndex = (currentFeedbackIndex + 1) % totalFeedbackSlides;
-        updateFeedbackDisplay();
+    if (currentIndex2 > maxIndex) {
+        currentIndex2 = 0; // Reset to start
+    } else if (currentIndex2 < 0) {
+        currentIndex2 = maxIndex; // Move to end
     }
 
-    function showPrevFeedback() {
-        currentFeedbackIndex = (currentFeedbackIndex - 1 + totalFeedbackSlides) % totalFeedbackSlides;
-        updateFeedbackDisplay();
-    }
-
-    function updateFeedbackDisplay() {
-        feedbackSlideContainer.style.transform = `translateY(-${currentFeedbackIndex * cardHeight * 2}px)`;
-    }
-
-    // Add event listeners if controls are present
-    const nextButton = document.querySelector(".carousel-next");
-    const prevButton = document.querySelector(".carousel-prev");
-
-    if (nextButton) nextButton.addEventListener("click", showNextFeedback);
-    if (prevButton) prevButton.addEventListener("click", showPrevFeedback);
-
-    // Auto-rotate every 5 seconds
-    setInterval(showNextFeedback, 5000);
+    const offset = -currentIndex2 * slideWidth;
+    document.querySelector(".carousel-slide").style.transform = `translateX(${offset}px)`;
 }
 
-// Video Overlay Functions
-function openVideo() {
-    document.getElementById("videoOverlay").style.display = "flex";
+function nextSlide() {
+    currentIndex2++;
+    updateCarousel();
 }
 
-function closeVideo() {
-    document.getElementById("videoOverlay").style.display = "none";
+function prevSlide() {
+    currentIndex2--;
+    updateCarousel();
 }
+
+// Auto-scroll every 5 seconds
+let autoScroll = setInterval(nextSlide, 5000);
+
+// Event Listeners
+document.querySelector(".carousel-next")?.addEventListener("click", () => {
+    clearInterval(autoScroll); // Pause auto-scroll on manual interaction
+    nextSlide();
+    autoScroll = setInterval(nextSlide, 5000); // Resume auto-scroll
+});
+
+document.querySelector(".carousel-prev")?.addEventListener("click", () => {
+    clearInterval(autoScroll);
+    prevSlide();
+    autoScroll = setInterval(nextSlide, 5000);
+});
+
+// Update carousel on window resize
+window.addEventListener("resize", updateCarousel);
+
+// Initial call to set carousel position
+updateCarousel();
+
+
+
+
+
+
+
 
 
 
