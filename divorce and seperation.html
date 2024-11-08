@@ -156,14 +156,18 @@
         <!-- Space for the form -->
         <div class="cash-offer-form">
           <!-- You can insert the form here -->
-          <form action="#" method="POST">
-            <input type="text" name="Address" placeholder="Address" required>
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="Phone" placeholder="Phone" required>
-            <input type="email" name="email" placeholder="Email" required>
-            
-            <button type="submit" class="btn-submit">Get Your Cash Offer</button>
-          </form>
+          <form id="cashOfferForm" onsubmit="sendEmail(); reset(); return false;">
+                
+            <input type="text" class="form-control" id="address" placeholder="Address" required>
+            <input type="text" class="form-control" id="name" placeholder="Name" required>
+            <input type="number" class="form-control" id="phone" placeholder="Phone" required>
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <div class="form-check">
+                <input type="checkbox" id="terms" class="form-check-input" required>
+                <label class="form-check-label" for="terms">I have read and accepted the Terms & Conditions and Privacy Statement.</label>
+            </div>
+            <button type="submit" class="btn btn-warning w-100">Submit</button>
+        </form>
         </div>
       </div>
     </div>
@@ -248,7 +252,7 @@
             Selling a home during a divorce or separation can be an overwhelming experience, but with proper planning, legal guidance, and open communication, the process becomes more manageable. While emotions may run high, working together and addressing financial and legal aspects early on can significantly ease the journey. By focusing on cooperation and seeking professional support, you can turn this challenging situation into an opportunity for a fresh start and a brighter future.
         </p>
         <div class="conclusion-call-to-action">
-            <a href="#" class="btn conclusion-btn">Contact Us Today for Support</a>
+          <a button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactFormModal">Contact Us Today for Support</a>
         </div>
     </div>
 </section>

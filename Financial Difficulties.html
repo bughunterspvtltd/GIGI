@@ -230,16 +230,17 @@
                 <!-- Right Side: Form -->
                 <div class="financial-page-form-right">
                     <h3>Let’s Get This Process Going!</h3>
-                    <form action="#" method="POST">
-                        <input type="text" name="address" placeholder="Address" required>
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="text" name="phone" placeholder="Phone #" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="terms" required>
-                            I certify that I have read and accepted the Terms & Conditions and Privacy Statement.
-                        </label>
-                        <button type="submit" class="financial-page-form-btn-submit">Get Your Cash Offer</button>
+                    <form id="cashOfferForm" onsubmit="sendEmail(); reset(); return false;">
+                
+                        <input type="text" class="form-control" id="address" placeholder="Address" required>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <input type="number" class="form-control" id="phone" placeholder="Phone" required>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" class="form-check-input" required>
+                            <label class="form-check-label" for="terms" style="color: #000000;">I have read and accepted the Terms & Conditions and Privacy Statement.</label>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Submit</button>
                     </form>
                 </div>
             </div>
