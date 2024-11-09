@@ -4315,3 +4315,321 @@ section {
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 /* End Inner Page Styles */
+
+
+
+
+
+
+ /* Main Container */
+ .grid-main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.grid-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ffcc00;
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Background Variants */
+.bg-blue { background-color: #f7f7f7; }
+.bg-gray { background-color: #f5f5f5; }
+.bg-green { background-color: #f3f3f3; }
+.bg-yellow { background-color: #f1f1f1; }
+
+/* Image Styling */
+.grid-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Title Styling */
+.grid-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Text Styling */
+.grid-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Card Overlay for Hover Effect */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-card:hover .grid-overlay {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-main-container {
+        padding: 20px;
+    }
+    .grid-image {
+        height: 150px;
+    }
+}
+
+
+
+
+
+/* Main Container */
+.mortgage-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Section Boxes */
+.mortgage-box {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.mortgage-box:hover {
+    transform: scale(1.02);
+}
+
+/* Section Backgrounds */
+.bg-light-blue { background-color: #f8f8f8; }
+.bg-light-green { background-color: #ffffff; }
+.bg-light-yellow { background-color: #f8f8f8; }
+.bg-light-gray { background-color: #ffffff; }
+
+/* Section Header */
+.mortgage-header {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Text Styling */
+.mortgage-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Column Layout for Content */
+.mortgage-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.column-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    transition: 2s ease-in-out;
+}
+
+.column-item:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.mortgage-image {
+    /* width: 100%; */
+    height: auto;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ffcc00;
+}
+
+/* Info Box Styling */
+.info-box {
+    font-size: 0.9em;
+    color: #333;
+    padding: 15px;
+    background-color: #fff6e6;
+    border-left: 4px solid #ffbe5b;
+    margin: 10px auto;
+    border-radius: 5px;
+    width: 800px; /* For wider alignment */
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mortgage-columns {
+        flex-direction: column;
+    }
+
+    .info-box{
+        width: auto;
+    }
+    .mortgage-image{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.single-family-page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styles */
+.single-family-page-section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.single-family-page-section h2 {
+    color: #000000;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.single-family-page-section p, .single-family-page-section ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.single-family-page-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.single-family-page-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Highlighted Subheadings */
+.single-family-page-highlight {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Flex Columns */
+.single-family-page-flex-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.single-family-page-flex-column {
+    flex: 1 1 45%;
+    min-width: 280px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Box */
+.single-family-page-cta {
+    text-align: center;
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.single-family-page-cta-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.single-family-page-btn {
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.single-family-page-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .single-family-page-section h2 {
+        font-size: 1.5em;
+    }
+}
