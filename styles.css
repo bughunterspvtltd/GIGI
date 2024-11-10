@@ -4601,7 +4601,7 @@ section {
 .single-family-page-cta {
     text-align: center;
     background-color: #ffcc00;
-    color: #fff;
+    color: #000000;
     padding: 40px 20px;
     border-radius: 8px;
     margin-top: 40px;
@@ -4631,5 +4631,197 @@ section {
 @media (max-width: 768px) {
     .single-family-page-section h2 {
         font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+/* Townhouse Page */
+.townhouse-page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styles */
+.townhouse-page-section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.townhouse-page-section h2 {
+    color: #000000;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.townhouse-page-section p, .townhouse-page-section ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.townhouse-page-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.townhouse-page-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Highlighted Subheadings */
+.townhouse-highlight {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Flex Columns */
+.townhouse-flex-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.townhouse-flex-column {
+    flex: 1 1 45%;
+    min-width: 280px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.townhouse-flex-column:hover {
+    transform: scale(1.05);
+}
+
+/* CTA Box */
+.townhouse-cta {
+    text-align: center;
+    background-color: #ffcc00;
+    color: #000000;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.townhouse-cta-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.townhouse-cta-button {
+    background-color: #000000;
+    color: #ffcc00;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.townhouse-cta-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .townhouse-page-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+/* Container for the comparison section */
+/* Container for the comparison section */
+.townhouse-comparison-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.townhouse-comparison-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.townhouse-comparison-header h2 {
+    font-size: 1.8em;
+    color: #000000;
+    font-weight: bold;
+}
+
+.townhouse-comparison-header h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Card container */
+.townhouse-comparison-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Card styling */
+.townhouse-comparison-card {
+    flex: 1 1 calc(50% - 10px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.townhouse-comparison-card p {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Styling for each side of the comparison */
+.townhouse-comparison-gigi {
+    border-left: 6px solid #000000;
+    background-color: #ffcc00;
+    color: #000000;
+    transition: 0.2s ease-in-out;
+}
+
+.townhouse-comparison-realtor {
+    border-left: 6px solid #ffcc00;
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+}
+
+.townhouse-comparison-realtor:hover {
+    transform: scale(1.05) ;
+}
+
+.townhouse-comparison-gigi:hover{
+    transform: scale(1.05) ;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .townhouse-comparison-card {
+        flex: 1 1 100%;
     }
 }
