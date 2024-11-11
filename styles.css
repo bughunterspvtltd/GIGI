@@ -625,6 +625,11 @@ body {
 }
 
 @media (max-width: 768px) {
+    .hollow-properties-text {
+        left: 171px;
+        top: -27px;
+        font-size: 3.5rem;
+    }
     .left-section h2 {
         font-size: 2.5rem;
     }
@@ -1893,8 +1898,9 @@ body {
 
 
 
-/* Feedback Section */
-.client-feedback {
+/* Vertical Feedback Carousel Styles */
+/* Vertical Feedback Carousel Styles */
+.vertical-feedback-carousel {
     display: flex;
     justify-content: center;
     background-color: #000;
@@ -1902,10 +1908,16 @@ body {
     padding: 40px;
 }
 
-.feedback-container {
+.vertical-feedback-carousel .feedback-container {
     display: flex;
     width: 100%;
     max-width: 1200px;
+    position: relative;
+}
+
+.feedback-left {
+    flex: 1;
+    padding: 20px;
     position: relative;
 }
 
@@ -1913,17 +1925,10 @@ body {
     font-family: 'Inter';
     font-size: 6rem;
     font-weight: bold;
-    color: rgb(255 255 255 / 0%);
+    color: rgba(255, 255, 255, 0%);
     position: absolute;
     top: -48px;
-    /* left: 15%; */
     -webkit-text-stroke: 0.5px #ffffff2b;
-}
-
-.feedback-left {
-    flex: 1;
-    padding: 20px;
-    position: relative;
 }
 
 .feedback-subtitle {
@@ -1980,18 +1985,18 @@ body {
     margin-top: 35px;
 }
 
-.carousel-container {
+.vertical-carousel-container {
     height: 100%;
     overflow: hidden;
 }
 
-.carousel-slide {
+.vertical-carousel-slide {
     display: flex;
     flex-direction: column;
     transition: transform 0.5s ease;
 }
 
-.feedback-card {
+.feedback-card-vertical {
     background: white;
     color: black;
     border-radius: 10px;
@@ -2013,18 +2018,18 @@ body {
 }
 
 /* Carousel Controls */
-.carousel-controls {
+.vertical-carousel-controls {
     position: absolute;
+    top: 50%;
+    right: -60px;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    top: 50%;
-    right: -60px;
     transform: translateY(-50%);
     z-index: 10;
 }
 
-.carousel-controls div {
+.vertical-carousel-controls div {
     width: 40px;
     height: 40px;
     background-color: #ffcc00;
@@ -2038,6 +2043,7 @@ body {
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Video Overlay */
 .video-overlay {
@@ -2071,7 +2077,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .client-feedback {
+    .vertical-feedback-carousel {
         flex-direction: column;
         align-items: center;
     }
@@ -2085,7 +2091,7 @@ body {
         margin-top: 20px;
     }
 
-    .carousel-controls {
+    .vertical-carousel-controls {
         right: 10px;
     }
 }
@@ -2108,6 +2114,7 @@ body {
         top: -20px;
     }
 }
+
 
 
 
@@ -4873,7 +4880,7 @@ section {
             left: 50%;
             top: 0;
             width: 4px;
-            height: 100%;
+            height: 90%;
             background-color: #ffcc00;
             transform: translateX(-50%);
             z-index: -1;

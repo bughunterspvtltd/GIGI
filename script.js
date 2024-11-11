@@ -53,93 +53,6 @@ indicators.forEach((indicator, index) => {
 
 
 
-// Carousel Controls
-document.querySelector('.carousel-control.prev').addEventListener('click', () => {
-    showSlide(currentIndex - 1);
-});
-document.querySelector('.carousel-control.next').addEventListener('click', () => {
-    showSlide(currentIndex + 1);
-});
-
-// Auto-slide every 5 seconds
-setInterval(() => {
-    showSlide(currentIndex + 1);
-}, 2000);
-
-
-
-
-
-
-
-
-
-// Feedback Carousel Functionality
-let currentIndex2 = 0;
-const feedbackCards = document.querySelectorAll(".feedback-card");
-const totalCards = feedbackCards.length;
-const carouselContainer = document.querySelector(".carousel-container");
-const slideWidth = feedbackCards[0].clientWidth + 10; // Adjust based on margin
-
-function updateCarousel() {
-    const visibleCards = window.innerWidth < 768 ? 1 : 2; // One card on mobile, two on larger screens
-    const maxIndex = totalCards - visibleCards;
-
-    if (currentIndex2 > maxIndex) {
-        currentIndex2 = 0; // Reset to start
-    } else if (currentIndex2 < 0) {
-        currentIndex2 = maxIndex; // Move to end
-    }
-
-    const offset = -currentIndex2 * slideWidth;
-    document.querySelector(".carousel-slide").style.transform = `translateX(${offset}px)`;
-}
-
-function nextSlide() {
-    currentIndex2++;
-    updateCarousel();
-}
-
-function prevSlide() {
-    currentIndex2--;
-    updateCarousel();
-}
-
-// Auto-scroll every 5 seconds
-let autoScroll = setInterval(nextSlide, 5000);
-
-// Event Listeners
-document.querySelector(".carousel-next")?.addEventListener("click", () => {
-    clearInterval(autoScroll); // Pause auto-scroll on manual interaction
-    nextSlide();
-    autoScroll = setInterval(nextSlide, 5000); // Resume auto-scroll
-});
-
-document.querySelector(".carousel-prev")?.addEventListener("click", () => {
-    clearInterval(autoScroll);
-    prevSlide();
-    autoScroll = setInterval(nextSlide, 5000);
-});
-
-// Update carousel on window resize
-window.addEventListener("resize", updateCarousel);
-
-// Initial call to set carousel position
-updateCarousel();
-
-
-// Video Overlay Functions
-function openVideo() {
-    document.getElementById("videoOverlay").style.display = "flex";
-}
-
-function closeVideo() {
-    document.getElementById("videoOverlay").style.display = "none";
-}
-
-
-
-
 
 
 
@@ -208,4 +121,85 @@ document.getElementById("contactForm").onsubmit = function(event) {
 
      
 
+
+
+
+
+// Infinite Vertical Carousel with Seamless Loop
+const feedbackContainer = document.querySelector(".vertical-carousel-slide");
+const feedbackCards = document.querySelectorAll(".feedback-card-vertical");
+const slideHeight = feedbackCards[0].clientHeight + 20; // Adjust for margin/padding if necessary
+let verticalIndex = 0;
+
+// Duplicate the feedback cards for a smooth infinite loop effect
+feedbackContainer.innerHTML += feedbackContainer.innerHTML; // Duplicate the content for looping
+const totalCards = feedbackContainer.children.length;
+
+// Function to update the carousel position
+function updateVerticalCarousel() {
+    verticalIndex++;
+    feedbackContainer.style.transition = "transform 0.5s ease";
+    feedbackContainer.style.transform = `translateY(${-verticalIndex * slideHeight}px)`;
+
+    // Reset position without transition for a seamless loop
+    if (verticalIndex >= totalCards / 2) {
+        setTimeout(() => {
+            feedbackContainer.style.transition = "none";
+            verticalIndex = 0;
+            feedbackContainer.style.transform = `translateY(0px)`;
+        }, 500); // Delay matches the transition duration
+    }
+}
+
+// Auto-scroll every 3 seconds
+let autoScroll = setInterval(updateVerticalCarousel, 3000);
+
+// Manual Control Functions
+document.querySelector(".vertical-carousel-next").addEventListener("click", () => {
+    clearInterval(autoScroll); // Pause auto-scroll on manual interaction
+    updateVerticalCarousel();
+    autoScroll = setInterval(updateVerticalCarousel, 3000); // Resume auto-scroll
+});
+
+document.querySelector(".vertical-carousel-prev").addEventListener("click", () => {
+    clearInterval(autoScroll);
+    verticalIndex = (verticalIndex - 1 + totalCards) % totalCards;
+    feedbackContainer.style.transition = "transform 0.5s ease";
+    feedbackContainer.style.transform = `translateY(${-verticalIndex * slideHeight}px)`;
+    autoScroll = setInterval(updateVerticalCarousel, 3000);
+});
+
+// Update carousel position on window resize
+window.addEventListener("resize", () => {
+    feedbackContainer.style.transition = "none";
+    feedbackContainer.style.transform = `translateY(${-verticalIndex * slideHeight}px)`;
+});
+
+
+// Function to open the video overlay
+function openVerticalVideo() {
+    const videoOverlay = document.getElementById("verticalVideoOverlay");
+    videoOverlay.style.display = "flex";
+
+    // Start video playback by setting the iframe src with autoplay
+    const iframe = videoOverlay.querySelector("iframe");
+    iframe.src = "https://www.youtube.com/embed/eDqfg_LexCQ?autoplay=1";
+}
+
+// Function to close the video overlay
+function closeVerticalVideo() {
+    const videoOverlay = document.getElementById("verticalVideoOverlay");
+    videoOverlay.style.display = "none";
+
+    // Stop video playback by removing the src attribute temporarily
+    const iframe = videoOverlay.querySelector("iframe");
+    iframe.src = ""; // Clear the src to stop playback
+    setTimeout(() => {
+        iframe.src = "https://www.youtube.com/embed/eDqfg_LexCQ"; // Restore the src without autoplay
+    }, 100);
+}
+
+// Add event listeners to open and close the video overlay
+document.querySelector(".video-thumbnail").addEventListener("click", openVerticalVideo);
+document.querySelector(".close").addEventListener("click", closeVerticalVideo);
 
