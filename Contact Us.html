@@ -104,20 +104,20 @@
 
     <!-- Centered Overlay Hero Image -->
     <div class="hero-overlay">
-        <img src="assests/Single Family House.jpg" alt="Hero Image" class="center-hero-image">
+        <img src="assests/Contact Us Hero.jpg" alt="Hero Image" class="center-hero-image">
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) );"></div>
 
         <!-- Hero Content -->
         <div class="hero-content">
-            <div class="hero-text">
+            <div class="hero-text" style="margin-top: 300px;">
                 <!-- <h1  style="line-height: 35px;">Cash Offers for<br><br><span class="highlight" style="color: #ffcc00;">Apartment Buildings</span></h1> -->
-                <h1 style="color: #ffcc00;">We Buy Single-Family Homes for Cash</h1>
+                <h1 style="color: #ffcc00;">Contact Us </h1>
                 <!-- Arrow Image -->
                 <!-- <div class="arrow-container">
                     <img src="assests/Curved Arrow.svg" alt="Curved Arrow" class="arrow-svg">
                 </div> -->
 
-                <p>At GIGI Buys Homes, we know that selling your home can feel overwhelming, especially when time is of the essence. That’s why we’ve simplified our process to make selling your single-family home fast, easy, and stress-free. Get a fair cash offer and move on your schedule!
+                <p>Feel free to reach out to us through any of the following methods:
                 </p>
 
                 <!-- <div class="gigi-bg">
@@ -126,10 +126,9 @@
             </div>
 
             <!-- Form Container -->
-            <div class="form-container">
+            <!-- <div class="form-container">
                 <h2>Get Your Free Cash Offer</h2>
                 <p>No commitments, just a free estimate</p>
-                <!-- <form id="cashOfferForm"> -->
 
                 <form id="cashOfferForm" onsubmit="sendEmail(); reset(); return false;">
                 
@@ -143,7 +142,7 @@
                     </div>
                     <button type="submit" class="btn btn-warning w-100">Submit</button>
                 </form>
-            </div>
+            </div> -->
 
 
         </div>
@@ -173,7 +172,7 @@
             <img src="assests/Live Chat Icon.svg" alt="Live Chat Icon">
             <h3>Live Chat</h3>
             <p>Connect with a customer service representative instantly through our live chat feature. Click on the chat icon in the bottom right corner of your screen to start a conversation.</p>
-            <button>CHAT WITH US</button>
+            <button onclick="openTawkChat()">CHAT WITH US</button>
         </div>
 
         <!-- Email Contact Card -->
@@ -305,7 +304,14 @@
     })();
     </script>
     
-    
+
+    <script>
+    function openTawkChat() {
+        if (typeof Tawk_API !== 'undefined' && Tawk_API.maximize) {
+            Tawk_API.maximize();
+        }
+    }
+</script>
     
     
     

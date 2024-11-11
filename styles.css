@@ -2274,7 +2274,7 @@ body {
 
 @media (max-width: 480px) {
     .footer-logo img {
-        width: 50px;
+        width: 200px;
     }
     
     .footer-social-icons img {
