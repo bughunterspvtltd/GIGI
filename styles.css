@@ -5182,7 +5182,6 @@ section {
         /* Center sections and adjust padding for smaller screens */
             .welcome-section,
             .commitment-section,
-            .why-choose-section,
             .process-section,
             .contact-section {
                 max-width: 1400px;
@@ -5636,3 +5635,12 @@ section {
         font-size: 0.95em;
     }
 }
+
+
+
+
+
+
+
+
+
