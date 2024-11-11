@@ -2252,6 +2252,7 @@ body {
     font-size: 0.9rem;
     color: #999;
     margin-bottom: 0;
+    padding-bottom: 10px;
 }
 
 /* Responsive Styles */
@@ -4980,7 +4981,55 @@ section {
 
 
 
+      /* FAQ  */   
 
+        .overlay-text-faq {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .overlay-text-faq h1 {
+            font-size: 2.5em;
+            margin: 0.2em 0;
+            font-weight: bold;
+        }
+        
+        .overlay-text-faq p {
+            font-size: 1.2em;
+            margin: 0;
+            font-weight: 300;
+        }
+        /* Mobile styles for screens 768px and below */
+            @media (max-width: 768px) {
+                .overlay-text-faq h1 {
+                    font-size: 1.8em;
+                }
+
+                .overlay-text-faq p {
+                    font-size: 1em;
+                }
+            }
+
+            /* Mobile styles for screens 480px and below */
+            @media (max-width: 480px) {
+                .overlay-text-faq {
+                    padding: 5px;
+                    top: 36%;
+                }
+
+                .overlay-text-faq h1 {
+                    font-size: 1.5em;
+                }
+
+                .overlay-text-faq p {
+                    font-size: 0.9em;
+                }
+            }
         
         /* Main container */
         .faq-container {
@@ -5056,6 +5105,7 @@ section {
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            border: 2px solid #ffcc00;
         }
 
         .faq-item {
