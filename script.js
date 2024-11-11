@@ -21,6 +21,12 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
 // Explore Properties 
 // Explore Properties Carousel
 const slides = document.querySelectorAll('.carousel-item');

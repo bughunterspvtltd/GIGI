@@ -46,10 +46,10 @@
 <div style="overflow-x: hidden;">
 
    <!-- Fixed Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="assests/GIGI Logo.svg" alt="GIGI Buys Homes" href="index.html" class="logo">
+            <img src="assests/GIGI Logo.svg" alt="GIGI Buys Homes" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="homeWeBuyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="homeWeBuyDropdown" role="button">
                         Home We Buy
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="homeWeBuyDropdown">
@@ -69,7 +69,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="whySellDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="whySellDropdown" role="button">
                         Why Sell?
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="whySellDropdown">
@@ -89,11 +89,11 @@
                 <li class="nav-item"><a class="nav-link" href="Faq.html">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="Contact Us.html">Contact Us</a></li>
             </ul>
-            <!-- <a href="#" class="btn btn-warning ms-3">Sell Now</a> -->
-            <a button type="button" class="btn btn-warning ms-3" data-bs-toggle="modal" data-bs-target="#contactFormModal">Sell Now</a>
+            <a class="btn btn-warning ms-3" data-bs-toggle="modal" data-bs-target="#contactFormModal">Sell Now</a>
         </div>
     </div>
 </nav>
+
 
 
 
@@ -144,7 +144,7 @@
                 
                     <input type="text" class="form-control" id="address" placeholder="Address" required>
                     <input type="text" class="form-control" id="name" placeholder="Name" required>
-                    <input type="number" class="form-control" id="phone" placeholder="Phone" required>
+                    <input type="tel" pattern="^[1-9]\d*$" class="form-control" id="phone" placeholder="Phone" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                     <input type="email" class="form-control" id="email" placeholder="Email" required>
                     <div class="form-check">
                         <input type="checkbox" id="terms" class="form-check-input" required>
