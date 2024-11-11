@@ -2778,7 +2778,7 @@ body {
 
 /* Custom Offer Section */
 .custom-offer-section {
-    background-color: #f8b400; /* Yellow background */
+    background-color: #ffcc00; 
     padding: 40px 0;
     display: flex;
     justify-content: center;
@@ -5173,3 +5173,466 @@ section {
                 max-width: 100%;
             }
         }
+
+
+
+
+        /* Welcome Section */
+
+        /* Center sections and adjust padding for smaller screens */
+            .welcome-section,
+            .commitment-section,
+            .why-choose-section,
+            .process-section,
+            .contact-section {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+.welcome-section {
+    display: flex;
+    padding: 40px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 0px 0px 20px 20px;
+    align-items: center;
+}
+
+.welcome-content {
+    flex: 1;
+}
+
+.welcome-content h1 {
+    font-size: 2.5em;
+}
+
+.welcome-content h1 span {
+    color: #ffcc00;
+}
+
+.welcome-content p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.welcome-image {
+    flex: 1;
+}
+
+.welcome-image img {
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid #ffcc00;
+}
+
+/* Commitment Section */
+.commitment-section {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    gap: 20px;
+    /* background-color: #ffcc00; */
+    color: #000000;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.commitment-content {
+    flex: 1;
+}
+
+.commitment-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.commitment-image {
+    flex: 1;
+}
+
+.commitment-image img {
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid #ffcc00;
+}
+
+
+
+
+/* Why Choose Us Section */
+.why-choose-section-about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000000;
+}
+
+.why-choose-section-about h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.why-choose-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 300px;
+    border: 2px solid #ffcc00;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #ffcc00;
+    font-size: 1.5em;
+}
+
+/* About Process Section */
+/* About Process Section */
+.about-process-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.about-process-section h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.about-process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-process-step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.about-process-step:hover {
+    transform: translateY(-10px);
+}
+
+.about-process-step img {
+    width: 50px;
+    margin-top: 15px; /* Adjust to create space for the step number */
+    margin-bottom: 15px;
+}
+
+.about-process-step h3 {
+    font-size: 1.5em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.about-process-step p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Step Number Styling */
+.about-process-step-number {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-process-step {
+        width: 100%;
+    }
+    
+    .about-process-section h2 {
+        font-size: 1.8em;
+    }
+    
+    .about-process-step h3 {
+        font-size: 1.3em;
+    }
+    
+    .about-process-step p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 40px;
+    background-color: #ffcc00;
+    color: #000000;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+    /* Welcome Section */
+    .welcome-section {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .welcome-content h1 {
+        font-size: 2em;
+    }
+
+    .welcome-content h1 span {
+        font-size: 2em;
+        color: #f5a623;
+    }
+
+    .welcome-content p {
+        font-size: 1.1em;
+        margin-top: 15px;
+    }
+
+    .welcome-image img {
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    /* Commitment Section */
+    .commitment-section {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .commitment-content h2 {
+        font-size: 2em;
+    }
+
+    .commitment-content p {
+        font-size: 1.1em;
+        margin-top: 15px;
+    }
+
+    .commitment-image img {
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-section {
+        padding: 30px;
+    }
+
+    .why-choose-section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .why-choose-cards {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        padding: 25px;
+    }
+
+    .card h3 {
+        font-size: 1.4em;
+    }
+
+    .card p {
+        font-size: 1em;
+    }
+
+    .card img {
+        width: 45px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+/* Contact Hero Section */
+/* Contact Information Section */
+.contact-info-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-info-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.contact-info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.contact-card:hover {
+   transform: scale(1.05);
+}
+
+
+.contact-card img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 1.5em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.contact-card button {
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-card button:hover {
+    background-color: #000000;
+    color: #ffcc00;
+}
+
+/* Appreciation Section */
+.appreciation-section {
+    background-color: #000000; /* Match background color to the design */
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    /* border-radius: 8px; */
+    /* margin: 20px auto; */
+    /* max-width: 1000px; */
+}
+
+.appreciation-section h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 0px auto 40px auto;
+    max-width: 1100px;
+}
+
+.appreciation-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 80%;
+    }
+
+    .appreciation-section {
+        padding: 30px 15px;
+    }
+
+    .appreciation-section h2 {
+        font-size: 1.5em;
+    }
+
+    .appreciation-section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .appreciation-section h2 {
+        font-size: 1.3em;
+    }
+
+    .appreciation-section p {
+        font-size: 0.95em;
+    }
+}
