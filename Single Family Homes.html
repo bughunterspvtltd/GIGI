@@ -135,7 +135,7 @@
                 
                     <input type="text" class="form-control" id="address" placeholder="Address" required>
                     <input type="text" class="form-control" id="name" placeholder="Name" required>
-                    <input type="number" class="form-control" id="phone" placeholder="Phone" required>
+                    <input type="tel" pattern="^[1-9]\d*$" class="form-control" id="phone" placeholder="Phone" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                     <input type="email" class="form-control" id="email" placeholder="Email" required>
                     <div class="form-check">
                         <input type="checkbox" id="terms" class="form-check-input" required>
@@ -377,9 +377,9 @@
             </div>
             <div class="footer-social-icons">
                 <img src="assests/facebook.svg" alt="Facebook" id="Facebook">
-                <img src="assests/twitter.svg" alt="Twitter" id="Twitter">
+                <!-- <img src="assests/twitter.svg" alt="Twitter" id="Twitter"> -->
                 <img src="assests/instagram.svg" alt="Instagram" id="Instagram">
-                <img src="assests/youtube.svg" alt="Youtube" id="Youtube">
+                <!-- <img src="assests/youtube.svg" alt="Youtube" id="Youtube"> -->
             </div>
             
         </div>
@@ -410,9 +410,9 @@
         <div class="footer-contact">
             <h3>Contact Us</h3>
             <ul>
-                <li><img src="assests/location.svg" alt="Location Icon"> 44 Danvers, NY City, USA, 70-102</li>
-                <li><img src="assests/email.svg" alt="Email Icon"> <a href="mailto:gigi@buyhomes.com" style="color: white; text-decoration: none;">gigi@buyhomes.com</a></li>
-                <li><img src="assests/call.svg" alt="Phone Icon"> +91-595-656-656</li>
+                <!-- <li><img src="assests/location.svg" alt="Location Icon"> 44 Danvers, NY City, USA, 70-102</li> -->
+                <li><img src="assests/email.svg" alt="Email Icon"> <a href="mailto:homestogigi@gmail.com" style="color: white; text-decoration: none;">homestogigi@gmail.com</a></li>
+                <li><img src="assests/call.svg" alt="Phone Icon"> (204) 815-3646</li>
             </ul>
         </div>
     </div>

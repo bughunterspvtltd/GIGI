@@ -119,7 +119,7 @@ function sendEmailModal() {
 // Attach sendEmail to form submit event if it's not inline in HTML
 document.getElementById("contactForm").onsubmit = function(event) {
     event.preventDefault(); // Prevent default form submission
-    sendEmail();
+    sendEmailModal();
 };
 
 
@@ -208,4 +208,11 @@ function closeVerticalVideo() {
 // Add event listeners to open and close the video overlay
 document.querySelector(".video-thumbnail").addEventListener("click", openVerticalVideo);
 document.querySelector(".close").addEventListener("click", closeVerticalVideo);
+
+
+
+
+
+
+
 
