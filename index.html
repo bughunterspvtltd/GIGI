@@ -29,7 +29,7 @@
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
-    s1.src='https://embed.tawk.to/6729f6eb2480f5b4f598ea0d/1ibtup2j8';
+    s1.src='https://embed.tawk.to/67680bb149e2fd8dfefbf0e5/1ifn6rce1';
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
@@ -113,7 +113,7 @@
         <a href="https://www.instagram.com/gigibuyhomes/" class="social-link" target="_blank">Instagram</a>
         <!-- <a href="#" class="social-link">YouTube</a> -->
         <!-- <a href="#" class="social-link">X</a> -->
-        <a href="#" class="social-link">Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61569336672405" class="social-link" target="_blank">Facebook</a>
     </div>
 
     <!-- Centered Overlay Hero Image -->
@@ -626,7 +626,9 @@
                 <img src="assests/GIGI Logo.svg" alt="Logo">
             </div>
             <div class="footer-social-icons">
-                <img src="assests/facebook.svg" alt="Facebook" id="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61569336672405" target="_blank">
+                     <img src="assests/facebook.svg" alt="Facebook" id="Facebook">
+                </a>    
                 <!-- <img src="assests/twitter.svg" alt="Twitter" id="Twitter"> -->
                 <a href="https://www.instagram.com/gigibuyhomes/" target="_blank">
                     <img src="assests/instagram.svg" alt="Instagram" id="Instagram">
@@ -710,7 +712,7 @@
                         <!-- Phone -->
                         <div class="col-md-6">
                             <label for="phone" class="form-label">Phone <span class="required">*</span></label>
-                            <input type="number" class="form-control" id="user_phone" placeholder="Your Phone Number" required>
+                            <input type="tel" pattern="^[1-9]\d*$" class="form-control" id="user_phone" placeholder="Your Phone Number" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
 
                         <!-- Email -->
@@ -750,7 +752,7 @@
 <!-- Initialize EmailJS with your User ID -->
 <script type="text/javascript">
   (function(){
-      emailjs.init("LlE1vZBdg1gZWj3Sp"); // Initialize with your EmailJS user ID
+      emailjs.init("4BwWVFalCZOqq4gtl"); // Initialize with your EmailJS user ID
   })();
 </script>
 
