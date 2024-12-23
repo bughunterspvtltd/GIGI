@@ -29,7 +29,7 @@
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
-    s1.src='https://embed.tawk.to/6729f6eb2480f5b4f598ea0d/1ibtup2j8';
+    s1.src='https://embed.tawk.to/67680bb149e2fd8dfefbf0e5/1ifn6rce1';
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
@@ -198,9 +198,13 @@
                 <img src="assests/GIGI Logo.svg" alt="Logo">
             </div>
             <div class="footer-social-icons">
-                <img src="assests/facebook.svg" alt="Facebook" id="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61569336672405" target="_blank">
+                     <img src="assests/facebook.svg" alt="Facebook" id="Facebook">
+                </a>    
                 <!-- <img src="assests/twitter.svg" alt="Twitter" id="Twitter"> -->
-                <img src="assests/instagram.svg" alt="Instagram" id="Instagram">
+                <a href="https://www.instagram.com/gigibuyhomes/" target="_blank">
+                    <img src="assests/instagram.svg" alt="Instagram" id="Instagram">
+                </a>
                 <!-- <img src="assests/youtube.svg" alt="Youtube" id="Youtube"> -->
             </div>
             
@@ -265,25 +269,25 @@
                     <div class="row g-3">
                         <!-- Address -->
                         <div class="col-md-12">
-                            <label for="address" class="form-label">Address</label>
+                            <label for="address" class="form-label">Address <span class="required">*</span></label>
                             <input type="text" class="form-control" id="user_address" placeholder="Address" required>
                         </div>
 
                         <!-- Name -->
                         <div class="col-md-6">
-                            <label for="name" class="form-label">Name</label>
+                            <label for="name" class="form-label">Name <span class="required">*</span></label>
                             <input type="text" class="form-control" id="user_name" placeholder="Your Name" required>
                         </div>
 
                         <!-- Phone -->
                         <div class="col-md-6">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="user_phone" placeholder="Your Phone Number" required>
+                            <label for="phone" class="form-label">Phone <span class="required">*</span></label>
+                            <input type="tel" pattern="^[1-9]\d*$" class="form-control" id="user_phone" placeholder="Your Phone Number" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
 
                         <!-- Email -->
                         <div class="col-md-12">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label">Email <span class="required">*</span></label>
                             <input type="email" class="form-control" id="user_email" placeholder="you@example.com" required>
                         </div>
 
@@ -312,14 +316,13 @@
 
 
 
-
 <!-- Load EmailJS Library in HTML -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <!-- Initialize EmailJS with your User ID -->
 <script type="text/javascript">
   (function(){
-      emailjs.init("LlE1vZBdg1gZWj3Sp"); // Initialize with your EmailJS user ID
+      emailjs.init("4BwWVFalCZOqq4gtl"); // Initialize with your EmailJS user ID
   })();
 </script>
 

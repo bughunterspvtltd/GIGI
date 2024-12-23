@@ -72,7 +72,7 @@ function sendEmail() {
         email: document.getElementById("email").value,
     };
 
-    emailjs.send("service_al5v0rr", "template_3vn1tt6", params)
+    emailjs.send("service_rcsc7m9", "template_ul20uxf", params)
     .then(response => {
         alert("Message sent successfully");
         
@@ -105,7 +105,7 @@ function sendEmailModal() {
 
     console.log("Form Data:", params); // Log form data to ensure accuracy
 
-    emailjs.send("service_al5v0rr", "template_2uhxa2f", params)
+    emailjs.send("service_rcsc7m9", "template_6o3cmzn", params)
     .then(response => {
         alert("Message sent successfully");
         
