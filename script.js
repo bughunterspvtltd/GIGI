@@ -189,7 +189,7 @@ function openVerticalVideo() {
 
     // Start video playback by setting the iframe src with autoplay
     const iframe = videoOverlay.querySelector("iframe");
-    iframe.src = "https://www.youtube.com/embed/eDqfg_LexCQ?autoplay=1";
+    iframe.src = "https://www.youtube.com/embed/vBgWJgtcVUg?autoplay=1";
 }
 
 // Function to close the video overlay
@@ -201,7 +201,7 @@ function closeVerticalVideo() {
     const iframe = videoOverlay.querySelector("iframe");
     iframe.src = ""; // Clear the src to stop playback
     setTimeout(() => {
-        iframe.src = "https://www.youtube.com/embed/eDqfg_LexCQ"; // Restore the src without autoplay
+        iframe.src = "https://www.youtube.com/embed/vBgWJgtcVUg"; // Restore the src without autoplay
     }, 100);
 }
 
